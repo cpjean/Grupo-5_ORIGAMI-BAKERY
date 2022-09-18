@@ -49,5 +49,5 @@ http://www.buenosairesbakery.com.ar/ (la animacion de la barra, al deslizar la p
 https://elsoldemartinez.com.ar/pasteleria/ (el footer)
 -https://www.panaderiagamas.com/panader%C3%ADa (catalogo y las fotos)
 https://www.panaderiadelpilar.com.ar/panificados/ (el cambio de idioma en la parte superior derecha)
-https://www.quibeluma.com.ar/panes-y-facturas.php(la barra de navegacion)
+https://www.quibeluma.com.ar/panes-y-facturas.php (la barra de navegacion)
 http://www.laalvear.com.ar/ (la barra de navegacion, y el carrousel y agregarle el carrito)
