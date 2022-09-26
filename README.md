@@ -51,3 +51,11 @@ https://elsoldemartinez.com.ar/pasteleria/ (el footer)
 https://www.panaderiadelpilar.com.ar/panificados/ (el cambio de idioma en la parte superior derecha)
 https://www.quibeluma.com.ar/panes-y-facturas.php (la barra de navegacion)
 http://www.laalvear.com.ar/ (la barra de navegacion, y el carrousel y agregarle el carrito)
+
+
+<!-- LINK DEL TRELLO -->
+https://trello.com/b/b9k7STCA/proyecto-integrador-dh
+
+<!-- LINK DEL GITHUB -->
+https://github.com/cpjean/Grupo-5_ORIGAMI-BAKERY
+
