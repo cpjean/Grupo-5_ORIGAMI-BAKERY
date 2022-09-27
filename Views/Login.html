@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <!-- LINKS CSS -->
+<!--     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/Index.css" rel="stylesheet">
-    <link href="css/General.css" rel="stylesheet">
+    <link href="css/General.css" rel="stylesheet"> -->
+    <link href="css/Login.css" rel="stylesheet">
     <title>LogIn</title>
 </head>
 <body>
-    
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>LogIn</header>
+                <form action="#">
+
+                    <div class="campo-input">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="campo-input">
+                        <input type="password" placeholder="Contraseña" class="input">
+                    </div>
+                    
+                    <div class="form-link">
+                            <a href="#" class="forgot-pass">Olvidaste tu Contraseña?</a>
+                    </div>
+
+                    <div class="campo-input">
+                        <button>Login</button>
+                    </div>
+                
+                    <div class="form-link">
+                       <span>No tenes cuenta? <a href="/Registro" class="signup-link">Registrate</a></span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
