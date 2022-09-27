@@ -13,21 +13,21 @@ app.listen (3030, ()=>{
 });
 
 app.get ('/', (req,res)=>{
-    res.sendFile (path.join(__dirname, 'views/Index.html'))
+    res.sendFile (path.join(__dirname, '/views/Index.html'))
 });
 
 app.get ('/Carrito', (req,res)=>{
-    res.sendFile (path.join(__dirname, 'views/Carrito.html'))
+    res.sendFile (path.join(__dirname, '/views/Carrito.html'))
 });
 
 app.get ('/Productos', (req,res)=>{
-    res.sendFile (path.join(__dirname, 'views/Productos.html'))
+    res.sendFile (path.join(__dirname, '/views/Productos.html'))
 });
 
 app.get ('/Registro', (req,res)=>{
-    res.sendFile (path.join(__dirname, 'views/Registro.html'))
+    res.sendFile (path.join(__dirname, '/views/Registro.html'))
 });
 
 app.get ('/LogIn', (req,res)=>{
-    res.sendFile (path.join(__dirname, 'views/Login.html'))
+    res.sendFile (path.join(__dirname, '/views/Login.html'))
 });

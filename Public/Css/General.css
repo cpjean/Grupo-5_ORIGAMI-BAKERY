@@ -1,8 +1,57 @@
+body {
+    background-color: #6c6c6c;
+}
+body img {
+    width: 100%;
+}
 /*-------------------- HEADER --------------------------*/
+#header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+}
 /*-----------------LOGO-------------------*/
+.cont-logo {
+    width: 40%;
+}
+.cont-logo img {
+    width: 200px;
+}
+
 /*--------------BARRA DE BUSQUEDA-------------*/
 /*---------------TEXTO---------------*/
 /*--------------NAVEGADOR---------------*/
+.cont-nav {
+    width: 60%;
+}
+.navegacion {
+}
+.pestañas {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.pestañas a:hover {
+    background-color: #1f1f1daa;
+    color: #e3bd00c7;   
+}
+.pestañas a {
+    font-size: 18px;
+    background-color: #1f1f1d3d;
+    border-radius: 50px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color:#ffffff;
+    transition: all 400ms;
+}
 /*-----------------MENU BURGER-----------------*/
 /*--------------------------MAIN---------------------------*/
 /*---------------------BANNER---------------------------*/
@@ -10,6 +59,48 @@
 /*------------DESCRIPCION----------------*/
 /*------------------TITULARES---------------------*/
 /*------------------FOOTER---------------*/
+#footer {
+    color: #ffffff;
+    background-color: #1f1f1d;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end;
+    width: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.cont-footer {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.cont-pie {
+    border-left: solid 1px #e1e1e1; 
+    border-right: solid 1px #e1e1e1;
+    width: 40%;
+}
+.cont-footer h2 {
+    text-align: center;
+}
+.cont-footer p {
+    text-align: justify;
+}
+.titulos-pie {
+    margin: 5px;
+}
+.redes-i {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.iconos-redes {
+    width: 30px;
+    font-size: 30px;
+    padding: 0 2px;
+    border: solid 1px #e1e1e1;
+    text-align: center;
+}
 @media (min-width: 1200px) {
 /*-------------------- HEADER --------------------------*/
 /*-----------------LOGO-------------------*/
