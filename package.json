@@ -1,0 +1,23 @@
+{
+  "name": "origami-bakery",
+  "version": "1.0.0",
+  "description": "ARCHIVO README\r ● Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio.\r ● Una breve descripción de los integrantes del equipo",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpjean/Grupo-5_ORIGAMI-BAKERY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpjean/Grupo-5_ORIGAMI-BAKERY/issues"
+  },
+  "homepage": "https://github.com/cpjean/Grupo-5_ORIGAMI-BAKERY#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
