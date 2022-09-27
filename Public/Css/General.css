@@ -1,27 +1,26 @@
 body {
     background-color: #6c6c6c;
-}
-body img {
-    width: 100%;
+    background-image: url(/Imagenes/fondo.jpg);
+    background-size: auto;
 }
 /*-------------------- HEADER --------------------------*/
 #header {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 15px;
-    left: 15px;
-    right: 15px;
+    top: 2%;
+    left: 2%;
+    right: 2%;
 }
 /*-----------------LOGO-------------------*/
 .cont-logo {
-    width: 40%;
+    width: 100px;
 }
 .cont-logo img {
-    width: 200px;
+    width: 100%;
 }
 
 /*--------------BARRA DE BUSQUEDA-------------*/
@@ -29,6 +28,10 @@ body img {
 /*--------------NAVEGADOR---------------*/
 .cont-nav {
     width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+
 }
 .navegacion {
 }
@@ -36,7 +39,8 @@ body img {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     list-style: none;
 }
 .pestañas a:hover {
