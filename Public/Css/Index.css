@@ -18,6 +18,39 @@
     /*--------------NAVEGADOR---------------*/
     /*-----------------MENU BURGER-----------------*/
     /*--------------------------MAIN---------------------------*/
+    .slider {
+        width: 50%;
+        overflow: hidden;
+        position: absolute;
+        left: 25%;
+        top: 18%;
+        box-shadow: 0px 0px 13px 10px #1f1f1d;
+    }
+    .cont-img-carrusel {
+        display : flex;
+        animation: cambio 20s infinite alternate linear;
+        width: 300%;
+    }
+    .img-movil {
+        width: 100%;
+        list-style: none;
+        display: flex;
+    }
+    .img-movil img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    @keyframes cambio {
+        0% {margin-left: 0;}
+        12.5% {margin-left: 0;}
+        25% {margin-left: -100%;}
+        37.5% {margin-left: -100%;}
+        50% {margin-left: -200%;}
+        62.5% {margin-left: -200%;}
+        75% {margin-left: -100%;}
+        87.5% {margin-left: -100%;}
+        100% {margin-left: 0;}
+    }
     /*---------------------BANNER---------------------------*/
     /*------------------IMAGENES----------------------*/
     /*------------DESCRIPCION----------------*/

@@ -1,7 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #6c6c6c;
     background-image: url(/Imagenes/fondo.jpg);
-    background-size: auto;
+    background-size: cover;
 }
 /*-------------------- HEADER --------------------------*/
 #header {
@@ -9,11 +14,12 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: fixed;
     top: 2%;
     left: 2%;
     right: 2%;
+    z-index: 1;
 }
 /*-----------------LOGO-------------------*/
 .cont-logo {
@@ -31,6 +37,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-right: 5px;
+    margin-top: 15px;
 
 }
 .navegacion {
@@ -58,22 +65,26 @@ body {
 }
 /*-----------------MENU BURGER-----------------*/
 /*--------------------------MAIN---------------------------*/
+
 /*---------------------BANNER---------------------------*/
 /*------------------IMAGENES----------------------*/
 /*------------DESCRIPCION----------------*/
 /*------------------TITULARES---------------------*/
 /*------------------FOOTER---------------*/
 #footer {
-    color: #ffffff;
-    background-color: #1f1f1d;
+    color: #ffffffae;
+    background-color: #1f1f1d89;
     position: absolute;
     bottom: 0;
     align-items: flex-end;
     width: 100%;
-    padding: 15px 0;
+    padding: 10px 0 5px;
     box-sizing: border-box;
+    display: none;
 }
+
 .cont-footer {
+    
     margin: auto;
     width: 90%;
     display: flex;
@@ -82,12 +93,13 @@ body {
 .cont-pie {
     border-left: solid 1px #e1e1e1; 
     border-right: solid 1px #e1e1e1;
-    width: 40%;
+    width: 30%;
 }
 .cont-footer h2 {
     text-align: center;
 }
 .cont-footer p {
+    margin: 0 3%;
     text-align: justify;
 }
 .titulos-pie {
@@ -101,9 +113,11 @@ body {
 .iconos-redes {
     width: 30px;
     font-size: 30px;
+    text-align: center;
     padding: 0 2px;
     border: solid 1px #e1e1e1;
     text-align: center;
+    box-sizing: content-box;
 }
 @media (min-width: 1200px) {
 /*-------------------- HEADER --------------------------*/
@@ -111,6 +125,25 @@ body {
 /*--------------BARRA DE BUSQUEDA-------------*/
 /*---------------TEXTO---------------*/
 /*--------------NAVEGADOR---------------*/
+.cont-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+
+}
+.navegacion {
+    width: 100%;
+    margin-right: 5%;
+}
+.pestañas {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
 /*-----------------MENU BURGER-----------------*/
 /*--------------------------MAIN---------------------------*/
 /*---------------------BANNER---------------------------*/
