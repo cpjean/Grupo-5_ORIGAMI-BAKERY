@@ -1,6 +1,6 @@
 {
   "name": "grupo-5_origami-bakery",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ARCHIVO README\r ● Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio. También agregar una breve descripción del público al que apunta el sitio.\r ● Una breve descripción de los integrantes del equipo",
   "main": "App.js",
   "scripts": {

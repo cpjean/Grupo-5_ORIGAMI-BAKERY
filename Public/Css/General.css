@@ -2,10 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #6c6c6c;
-    background-image: url(/Imagenes/fondo.jpg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url('/Imagenes/fondo.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 /*-------------------- HEADER --------------------------*/
@@ -16,8 +23,8 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     position: fixed;
-    top: 2%;
-    left: 2%;
+    top: 1%;
+    left: 1%;
     right: 2%;
     z-index: 1;
 }
@@ -29,24 +36,132 @@ body {
     width: 100%;
 }
 
-/*--------------BARRA DE BUSQUEDA-------------*/
-/*---------------TEXTO---------------*/
 /*--------------NAVEGADOR---------------*/
+.cont-nav {
+    width: 50%;
+}
+.navegacion {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.desplegable {
+    text-align: center;
+    color:#ffffff;
+    font-size: 30px;
+    background-color: #1f1f1dc6;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: solid 1px #e1e1e1;
+}
+.desplegable:hover {
+    background-color: #1f1f1df1;
+    color: #e3bd00c7; 
+}
+.desplegable:hover .pestañas {
+    visibility: visible;
+}
+.pestañas {
+    visibility: hidden;
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    transition: all 450ms;
+}
+.pestañas li {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+.pestañas a {
+    text-align: center;
+    font-size: 18px;
+    background-color: #1f1f1db4;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color:#ffffff;
+    transition: all 400ms;
+    border: solid 1px #e1e1e1;
+}
+
+/*------------------FOOTER---------------*/
+#footer a {
+    text-decoration: none;
+    color: #ffffffae;
+}
+.footer {
+    color: #ffffffae;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 0 0;
+    box-sizing: border-box;
+}
+.footer .vista-default {
+    border: solid 1px #e1e1e1;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 2rem;
+    background-color: #1f1f1d;
+    display: flex;
+    justify-content: center;
+
+}
+.iconos-redes-vista {
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.vista-default .fa-bars {
+    display: none;
+}
+.cont-pie {
+    display: none;
+    width: 30%;
+}
+.iconos-redes {
+    width: 30px;
+    font-size: 25px;
+    text-align: center;
+    padding: 2px 2px;
+    border: solid 1px #e1e1e1;
+    text-align: center;
+    box-sizing: content-box;
+    border-radius: 10px;
+}
+@media (min-width: 1200px) {
+/*-------------------- HEADER --------------------------*/
+.cont-logo {
+    position: relative;
+    left: -6px;
+}
+
+/*--------------NAVEGADOR---------------*/
+.nav-desplegable {
+    display: none;
+}
 .cont-nav {
     width: 60%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-right: 5px;
-    margin-top: 15px;
 
 }
 .navegacion {
+    width: 100%;
+    margin-right: 5%;
 }
 .pestañas {
+    visibility: visible;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     list-style: none;
 }
@@ -55,45 +170,40 @@ body {
     color: #e3bd00c7;   
 }
 .pestañas a {
-    font-size: 18px;
     background-color: #1f1f1d3d;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 5px 10px;
     text-decoration: none;
     color:#ffffff;
     transition: all 400ms;
 }
-/*-----------------MENU BURGER-----------------*/
-/*--------------------------MAIN---------------------------*/
 
-/*---------------------BANNER---------------------------*/
-/*------------------IMAGENES----------------------*/
-/*------------DESCRIPCION----------------*/
-/*------------------TITULARES---------------------*/
 /*------------------FOOTER---------------*/
-#footer {
-    color: #ffffffae;
-    background-color: #1f1f1d89;
-    position: absolute;
-    bottom: 0;
-    align-items: flex-end;
-    width: 100%;
-    padding: 10px 0 5px;
-    box-sizing: border-box;
+.iconos-redes-vista {
     display: none;
 }
 
+#footer:hover {
+    padding: 10px 0 5px; 
+    background-color: #1f1f1df5; 
+}
+.footer:hover .vista-default{
+    display: none;
+}
+.footer:hover .cont-pie {
+    display:block;
+}
 .cont-footer {
-    
     margin: auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
 }
-.cont-pie {
+
+.cont-pie-dos {
     border-left: solid 1px #e1e1e1; 
     border-right: solid 1px #e1e1e1;
-    width: 30%;
+    width: 33%;
 }
 .cont-footer h2 {
     text-align: center;
@@ -110,45 +220,9 @@ body {
     justify-content: space-around;
     margin-top: 20px;
 }
-.iconos-redes {
-    width: 30px;
-    font-size: 30px;
-    text-align: center;
-    padding: 0 2px;
-    border: solid 1px #e1e1e1;
-    text-align: center;
-    box-sizing: content-box;
+.vista-default .fa-bars {
+    font-size: 1.5rem;
+    margin: 3px 0 1% 0;
+    display: block;
 }
-@media (min-width: 1200px) {
-/*-------------------- HEADER --------------------------*/
-/*-----------------LOGO-------------------*/
-/*--------------BARRA DE BUSQUEDA-------------*/
-/*---------------TEXTO---------------*/
-/*--------------NAVEGADOR---------------*/
-.cont-nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 5px;
-
-}
-.navegacion {
-    width: 100%;
-    margin-right: 5%;
-}
-.pestañas {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-}
-/*-----------------MENU BURGER-----------------*/
-/*--------------------------MAIN---------------------------*/
-/*---------------------BANNER---------------------------*/
-/*------------------IMAGENES----------------------*/
-/*------------DESCRIPCION----------------*/
-/*------------------TITULARES---------------------*/
-/*------------------FOOTER---------------*/
 }
