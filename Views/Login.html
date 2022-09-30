@@ -6,20 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ICONS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
     <!-- LINKS CSS -->
-<!--     <link href="css/normalize.css" rel="stylesheet">
+     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/Index.css" rel="stylesheet">
-    <link href="css/General.css" rel="stylesheet"> -->
+    <link href="css/General.css" rel="stylesheet"> 
     <link href="css/Login.css" rel="stylesheet">
     <title>LogIn</title>
 </head>
 <body>
+
+    <header id="header">
+        <div class="cont-logo">
+           <a href="/"><img src="\Imagenes\Logo.png" alt="Logo del negocio" class="logo"></a> 
+        </div>
+        <div class="cont-nav">
+            <nav class="navegacion">
+                <div class="nav-desplegable">
+                    <i class="fa-solid fa-bars desplegable"></i>
+                </div>
+                <ul class="pestañas">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/Productos">Productos</a></li>
+                    <li><a href="/Carrito">Carrito</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="/Login">Ingresá</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <section class="container forms">
         <div class="form login">
             <div class="form-content">
-                <header>LogIn</header>
+                <header>Iniciar Sesion</header>
                 <form action="#">
 
                     <div class="campo input-campo">
@@ -39,21 +61,28 @@
                         <button>Login</button>
                     </div>
                 
-                    <div class="form-link">
-                       <span>No tenes una cuenta? <a href="/Registro" class="signup-link">Registrate</a></span>
-                    </div>
-
+                    
                 </form>
+                <div class="form-link">
+                   <span>No tenes una cuenta? <a href="/Registro" class="signup-link">Registrate</a></span>
+                </div>
             </div>
-<!-- 
-<div class="line"></div> -->
+            
+<div class="line"></div>
 
-<!-- <div class="media-options">
+<div class="media-options">
     <a href="#" class="campo facebook">
         <i class="fa-brands fa-facebook-f facebook-icon"></i>
         <span>Inicia sesion con Facebook</span>
-    </a> -->
-</div>
+    </a>
+</div> 
+
+<div class="media-options">
+    <a href="#" class="campo google">
+        <i class="fa-brands fa-google google-icon"></i>
+        <span>Inicia sesion con Google</span>
+    </a>
+</div> 
         </div>
     </section>
 </body>

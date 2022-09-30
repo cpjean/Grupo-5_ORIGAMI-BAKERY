@@ -84,15 +84,60 @@ form{
 .media-options a{
     display: flex;
     background-color: #4267b2;
-    justify-content: center;
-    align-items: center;
 }
 
 a.facebook{
     color: #fff;
     background-color: #4267b2;
+    justify-content: center;
+    align-items: center;
 }
 
+a.facebook .facebook-icon{
+    height: 23px;
+    width: 23px;
+    color: #0171d3;
+    font-size: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.facebook-icon{
+    position: absolute; 
+     top: 50%; 
+   left: 15px;
+    transform: translateY(-50%);
+}
+
+a.google{
+    border: 1px solid #cacaca;
+    color: #000000;
+    background-color: #e5e5e5;
+    justify-content: center;
+    align-items: center;
+}
+
+a.google .google-icon{
+    height: 25px;
+    width: 25px;
+    color: #d62828;
+    font-size: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.google-icon{
+    position: absolute; 
+     top: 50%; 
+   left: 15px;
+    transform: translateY(-50%);
+}
 /*
 Tengo que arreglar el tema del ojito en el password xd
 .fa-eye-slash{
@@ -124,7 +169,24 @@ Tengo que arreglar el tema del ojito en el password xd
     text-decoration: underline;
 }
 
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
 
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #232836;
+    padding: 0 15px;
+}
 
 @media (min-width: 1200px) {
     /*-------------------- HEADER --------------------------*/

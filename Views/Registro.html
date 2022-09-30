@@ -9,42 +9,71 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
-
-<!--     <link href="css/normalize.css" rel="stylesheet">
+    <!-- LINKS CSS -->
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/Index.css" rel="stylesheet">
-    <link href="css/General.css" rel="stylesheet"> -->
-    <link href="css/Registro.css" rel="stylesheet">
-    <title>Registro</title>
+    <link href="css/General.css" rel="stylesheet"> 
+    <link href="css/Login.css" rel="stylesheet">
+    <title>LogIn</title>
 </head>
 <body>
+
+    <header id="header">
+        <div class="cont-logo">
+           <a href="/"><img src="\Imagenes\Logo.png" alt="Logo del negocio" class="logo"></a> 
+        </div>
+        <div class="cont-nav">
+            <nav class="navegacion">
+                <div class="nav-desplegable">
+                    <i class="fa-solid fa-bars desplegable"></i>
+                </div>
+                <ul class="pestañas">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/Productos">Productos</a></li>
+                    <li><a href="/Carrito">Carrito</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="/Login">Ingresá</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <section class="container forms">
         <div class="form login">
             <div class="form-content">
-                <header>REGISTRATE</header>
+                <header>Registrate</header>
                 <form action="#">
 
-                    <div class="campo-input">
+                    <div class="campo input-campo">
                         <input type="email" placeholder="Email" class="input">
                     </div>
 
-                    <div class="campo-input">
+                    <div class="campo input-campo">
                         <input type="password" placeholder="Contraseña" class="input">
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
                     </div>
 
-                    <div class="campo-input">
-                        <input type="password" placeholder="Confirmar Contraseña" class="input">
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Confirmar contraseña" class="input" required >
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+                    
+                    <div class="form-link">
+                            <a href="#" class="forgot-pass">Olvidaste tu Contraseña?</a>
                     </div>
 
-                    <div class="campo-input">
-                        <button>Registrate</button>
+                    <div class="campo input-campo">
+                        <button>Registrarse</button>
                     </div>
                 
-                    <div class="form-link">
-                       <span>Ya tenes una cuenta? <a href="/Login" class="LogIn-link">LogIn</a></span>
-                    </div>
-
+                    
                 </form>
+                <div class="form-link">
+                   <span>Ya tenes una cuenta? <a href="/Login" class="signup-link">Inicia sesion</a></span>
+                </div>
             </div>
+            
+
         </div>
     </section>
 </body>
