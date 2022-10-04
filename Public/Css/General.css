@@ -127,7 +127,7 @@ body {
 }
 .footer {
     color: #ffffffae;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     align-items: flex-end;
     width: 100%;
