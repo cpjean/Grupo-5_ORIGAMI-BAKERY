@@ -38,6 +38,11 @@ header{
     text-align: center;
 }
 
+.novedades{
+    justify-content: center;
+    align-items: center;
+}
+
 /* al contenido del formulario le doy una separacion de 30px entre si */
 form{
     margin-top: 30px;

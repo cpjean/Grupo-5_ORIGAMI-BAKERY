@@ -34,7 +34,10 @@ body {
 
 /*-----------------LOGO-------------------*/
 .cont-logo {
-    width: 100px;
+    position: relative;
+    bottom: 30px;
+    padding-right: 50px;
+    width: 200px;
 }
 .cont-logo img {
     width: 100%;
