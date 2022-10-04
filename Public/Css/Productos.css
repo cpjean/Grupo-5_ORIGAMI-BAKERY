@@ -1,26 +1,131 @@
-/*-------------------- HEADER --------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ /*-----------------BODY-------------------*/
+body{
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/*-----------------HEADER-------------------*/
+#header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    right: 2%;
+    z-index: 1;
+}
 /*-----------------LOGO-------------------*/
-/*--------------BARRA DE BUSQUEDA-------------*/
-/*---------------TEXTO---------------*/
-/*--------------NAVEGADOR---------------*/
-/*-----------------MENU BURGER-----------------*/
-/*--------------------------MAIN---------------------------*/
-/*---------------------BANNER---------------------------*/
-/*------------------IMAGENES----------------------*/
-/*------------DESCRIPCION----------------*/
-/*------------------TITULARES---------------------*/
-/*------------------FOOTER---------------*/
-@media (min-width: 1200px) {
-    /*-------------------- HEADER --------------------------*/
-    /*-----------------LOGO-------------------*/
-    /*--------------BARRA DE BUSQUEDA-------------*/
-    /*---------------TEXTO---------------*/
-    /*--------------NAVEGADOR---------------*/
-    /*-----------------MENU BURGER-----------------*/
-    /*--------------------------MAIN---------------------------*/
-    /*---------------------BANNER---------------------------*/
-    /*------------------IMAGENES----------------------*/
-    /*------------DESCRIPCION----------------*/
-    /*------------------TITULARES---------------------*/
-    /*------------------FOOTER---------------*/
+.cont-logo {
+    position: relative;
+    bottom: 30px;
+    padding-right: 50px;
+    width: 200px;
+}
+.cont-logo img {
+    width: 100%;
+}
+ 
+/*-----------------celular-------------------*/
+    @media (min-width: 361px){
+       
+        .logo {
+            width: 30%;
+        }
+        .logo img {
+            min-width: fit-content;
+        }
+    }
+
+    /*-----------------computadora-------------------*/
+    @media (min-width: 1200px) {
+        /*-------------------- HEADER --------------------------*/
+        .cont-logo {
+            position: relative;
+            left: -6px;
+        }
+        /*------------------FOOTER---------------*/
+.iconos-redes-vista {
+    display: none;
+}
+
+#footer:hover {
+    padding: 10px 0 5px; 
+    background-color: #1f1f1df5; 
+}
+.footer:hover .vista-default{
+    display: none;
+}
+.footer:hover .cont-pie {
+    display:block;
+}
+.cont-footer {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-pie-dos {
+    border-left: solid 1px #e1e1e1; 
+    border-right: solid 1px #e1e1e1;
+    width: 33%;
+}
+.cont-footer h2 {
+    text-align: center;
+}
+.cont-footer p {
+    margin: 0 3%;
+    text-align: justify;
+}
+.titulos-pie {
+    margin: 5px;
+}
+.redes-i {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.vista-default .fa-bars {
+    font-size: 1.5rem;
+    margin: 3px 0 1% 0;
+    display: block;
+}
+    }
+/*-----------------contenedor productos-------------------*/
+    #productos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    #productos img{
+        width: 250px;
+    }
+
+    .precio {
+        color: black;
+    }
+
+    .descripcion{
+        color: black
+    }
+/*-----------------contenedor de cada producto-------------------*/
+    .card{
+        border-radius: 4px;
+        background-color: #ebebeb;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12) , 0 1px 2px rgba(0,0,0,0.24);
     }
