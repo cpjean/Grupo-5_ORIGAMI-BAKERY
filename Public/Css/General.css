@@ -34,8 +34,10 @@ body {
 .cont-logo {
     position: relative;
     bottom: 30px;
+    right: 30px;
     padding-right: 50px;
     width: 200px;
+    filter: drop-shadow( 10px 9px 5px #e3bd00c7);
 }
 .cont-logo img {
     width: 100%;
@@ -131,6 +133,7 @@ body {
     width: 100%;
     padding: 0 0 0;
     box-sizing: border-box;
+    z-index: 1;
 }
 .footer .vista-default {
     border: solid 1px #e1e1e1;

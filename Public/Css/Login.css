@@ -1,37 +1,18 @@
-/* FUENTE POPPINS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* A todo el form le doy estas caracteristicas */
-.container{
-    height: 100vh;
+.container {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image:url('/Imagenes/fondo.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 /* a la caja del login le asigno: */
 .form{
     max-width: 430px;
-    width: 100%;
+    margin: 100px auto 5px;
+    width: 90%;
     padding: 30px;
     border-radius: 6px ;
     background: #fff;
 }
 
 /* al header (LogIn) le asigno: */
-header{
+.reg{
     font-size: 28px;
     font-weight: 600;
     color: #232836;
