@@ -12,6 +12,8 @@
     background: #fff;
 }
 
+
+
 /* al header (LogIn) le asigno: */
 .reg{
     font-size: 28px;
@@ -32,6 +34,7 @@ form{
     width: 100%;
     margin-top: 20px;
     border-radius: 6px;
+    display: none;
 }
 
 /* a los inputs y al boton les asigno: */
