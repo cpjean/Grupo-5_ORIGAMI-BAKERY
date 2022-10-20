@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="css/Login.css" rel="stylesheet">
+    <title>Registrate</title>
+</head>
+<body>
+
+    <%- include ('../partials/header') %> 
+
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header class="reg">Registrate</header>
+                <form action="#">
+
+                    <div class="campo input-campo">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Contraseña" class="input">
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Confirmar contraseña" class="input" required >
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+
+                    <div class="novedades">
+                        <label for="novedades">
+                            <input type="checkbox" name="novedades" id="novedades">Te gustaria recibir novedades?
+                        </label>
+                    </div>
+
+                    <div class="campo input-campo">
+                        <button>Registrarse</button>
+                    </div>
+                
+                    
+                </form>
+                <div class="form-link">
+                   <span>Ya tenes una cuenta? <a href="/Login" class="signup-link">Inicia sesion</a></span>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+</body>
+</html>

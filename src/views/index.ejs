@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head') %> 
+    <link href="css/Index.css" rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body id="body">
+
+ <%- include ('./partials/header') %> 
+
+    <main id="main">
+
+        <div class="slider">
+            <ul class="cont-img-carrusel">
+                <li class="img-movil">
+                    <div class="enunciado">
+                        <a href="/Productos"><h2 class="titulo">Date un gusto</h2></a> 
+                        <p class="descripcion"> Descubre nuestras delicias</p>
+                    </div>
+                    <img src="Imagenes\tienda.jpg" alt="Tienda">
+                </li>
+                <li class="img-movil">            
+                    <div class="enunciado">
+                        <a href="/Productos"><h2 class="titulo">La mejor calidad</h2></a>
+                        <p class="descripcion">El mejor sabor</p>
+                    </div>
+                    <img src="Imagenes\carrusel-productos-panes.jpg" alt="Producto: panes">
+                </li>
+                <li class="img-movil">
+                    <div class="enunciado">
+                        <a href="/Login"><h2 class="titulo">Conocenos</h2></a>
+                        <p class="descripcion">Mas de x años historias</p>
+                    </div>
+                    <img src="Imagenes\carrusel-nosotros.jpg" alt="Nosotros">
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+<%- include('./partials/footer') %> 
+
+</body>
+</html>

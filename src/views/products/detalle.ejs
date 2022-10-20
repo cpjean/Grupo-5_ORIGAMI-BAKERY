@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="css/Detalle.css" rel="stylesheet">
+    <title>Productos</title>
+</head>
+<body>
+    <%- include ('../partials/header') %> 
+
+
+    <main class="container">
+        <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
+        
+        <div class="left-column">
+            <img src="Imagenes/CañonRellenoDDL.jpg" alt="Cañon Relleno DDL">
+        </div>
+
+        <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
+
+        <div class="right-column">
+        
+          <!-- Descripcion de Producto -->
+          <div class="product-description">
+            <span>Facturas</span>
+            <h1>Cañon Relleno de Dulce de Leche</h1>
+            <p>Cañoncitos rellenos de Dulce de Leche, con masa casera de hojaldre simple y rápida.</p>
+          </div>
+       
+          <!-- Cantidad -->
+          <div class="cantidad-configuration">
+            <span>Cantidad</span>
+            <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
+          </div>
+
+          <!-- Precio -->
+          <div class="product-price">Precio:
+            <span>120$</span>
+          </div>
+
+          <!-- Añadir al Carrito-->
+          <div>
+            <a href="#" class="cart-btn">Añadir al Carrito</a>
+          </div>
+
+        </div>
+    
+    </main> 
+
+    <%- include ('../partials/footer') %> 
+
+</body>
+</html>
+
+    
+</body>
+</html>

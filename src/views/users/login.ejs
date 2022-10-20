@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="css/login.css" rel="stylesheet">
+    <title>Inicia Sesion</title>
+</head>
+<body>
+
+    <%- include ('../partials/header') %> 
+
+
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header class="reg">Iniciar Sesion</header>
+                <form action="#">
+
+                    <div class="campo input-campo">
+                        <input type="email" placeholder="Email" class="input">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Contraseña" class="input">
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+                    
+                    <div class="form-link">
+                            <a href="#" class="forgot-pass">Olvidaste tu Contraseña?</a>
+                    </div>
+
+                    <div class="campo input-campo">
+                        <button>Login</button>
+                    </div>
+                
+                    
+                </form>
+                <div class="form-link">
+                   <span>No tenes una cuenta? <a href="/Registro" class="signup-link">Registrate</a></span>
+                </div>
+            </div>
+            
+<div class="line"></div>
+
+<div class="media-options">
+    <a href="#" class="campo facebook">
+        <i class="fa-brands fa-facebook-f facebook-icon"></i>
+        <span>Inicia sesion con Facebook</span>
+    </a>
+</div> 
+
+<div class="media-options">
+    <a href="#" class="campo google">
+        <i class="fa-brands fa-google google-icon"></i>
+        <span>Inicia sesion con Google</span>
+    </a>
+</div> 
+        </div>
+    </section>
+</body>
+</html>
