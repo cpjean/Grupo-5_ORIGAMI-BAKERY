@@ -1,22 +1,24 @@
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 7% auto 5%;
     padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-radius: 10px;
+    background-color: #1b1b1b90;
   }
 
   /* Columnas */
 .left-column {
-    width: 55%;
+    width: 45%;
     position: relative;
     display: flex;
     justify-content: center;
   }
 
 .right-column {
-    width: 45%;
+    width: 55%;
     position: relative;
     margin: 45px;
     display: flex;
@@ -25,7 +27,8 @@
 
   /* Imagen Columna Izquierda */
 .left-column img {
-    width: 50%;
+    width: 70%;
+    border-radius: 10px;
   }
 
   /* Descripcion de Producto */
@@ -79,12 +82,12 @@
     align-items: center;
     border-bottom: 1px solid #ffffffae;
     margin-bottom: 20px;
+    color: #ffffffae;
   }
 
 .product-price span {
     font-size: 26px;
     font-weight: 300;
-    color: #ffffffae;
     margin-right: 20px;
   }
 

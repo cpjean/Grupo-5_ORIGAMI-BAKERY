@@ -32,14 +32,13 @@ body {
 
 /*-----------------LOGO-------------------*/
 .cont-logo {
+    background-color: #e1e1e1a0;
+    border-radius: 50%;
     position: relative;
-    bottom: 30px;
-    right: 30px;
-    padding-right: 50px;
-    width: 200px;
-    filter: drop-shadow( 10px 9px 5px #e3bd00c7);
+    width: 90px;
 }
 .cont-logo img {
+    filter: drop-shadow( 5px 3px 15px #e3bd00a9);
     width: 100%;
 }
 

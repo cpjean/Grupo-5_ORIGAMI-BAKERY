@@ -39,11 +39,12 @@ separacion del ultimo producto con el footer*/
 @media (min-width: 1200px) {
     #productos {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         justify-content: space-between;
     }
     .card {
         width: 30%;
+        height: 200px;
         flex-direction: row;
         flex-wrap: nowrap;
         align-self: auto;
