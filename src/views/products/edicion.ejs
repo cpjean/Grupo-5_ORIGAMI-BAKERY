@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include ('../partials/head') %> 
+    <link href="css/Creacion.css" rel="stylesheet">
+    <title>Editar Producto</title>
 </head>
 <body>
-    
+
+    <%- include ('../partials/header') %> 
+
+    <section class="container forms">
+
+        <div class="form login">
+            
+            <div class="form-content">
+
+                <header class="reg">Editar Producto</header>
+
+                <form action="#">
+
+                    <div class="campo input-campo">
+                        <label for="Nombre">Buscar Producto:  </label>
+                        <input type="text" placeholder="Search.." class="input">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="Nombre">Descripción de Producto:  </label>
+                        <input type="text" placeholder="descripcion del producto buscado" class="input">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="Nombre">Imagen Producto:  </label>
+                        <input type="text" placeholder="imagen de producto buscado" accept="image/png, image/gif, image/jpeg">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="categorias">Categorias:  </label>
+                        <select name="categorias" id="categorias">
+                            <option value="pasteleria"></option>
+                        </select>
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="cantidad">Cantidad:  </label>
+                        <input type="number" placeholder="cantidad de prod." id="cantidad" name="cantidad" class="input">
+                    </div>
+                    
+                    <div class="campo input-campo">
+                        <label for="precio">Precio:  </label>
+                        <input type="number" placeholder="precio de producto buscado" id="precio" name="precio" class="input">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <button>Modificar</button>
+                    </div>
+                
+                </form>
+
+            </div>
+            
+        </div>
+
+    </section>
+
 </body>
 </html>

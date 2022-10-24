@@ -18,6 +18,12 @@ let controladorViews = {
     },
     detalle: function (req, res){
         res.render ('./products/detalle')
+    },
+    creacion: function(req, res){
+        res.render('./products/creacion')
+    },
+    edicion: function(req, res){
+        res.render('./products/edicion')
     }
 }
 

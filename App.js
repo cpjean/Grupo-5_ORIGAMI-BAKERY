@@ -29,6 +29,10 @@ app.use('/carrito', rutaIndex);
 
 app.use('/detalle', rutaIndex);
 
+app.use('/creacion', rutaIndex);
+
+app.use('/edicion', rutaIndex);
+
 app.listen (3030, ()=>{
     console.log ('Servidor corriendo')
 });
