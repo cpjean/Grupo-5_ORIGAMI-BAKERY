@@ -18,4 +18,8 @@ router.get('/detalle', rutaIndex.detalle)
 
 router.get('/productos', rutaIndex.productos)
 
+router.get('/creacion', rutaIndex.creacion)
+
+router.get('/edicion', rutaIndex.edicion)
+
 module.exports = router;
