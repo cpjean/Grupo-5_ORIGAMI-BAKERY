@@ -18,7 +18,16 @@ let controladorViews = {
     },
     detalle: function (req, res){
         res.render ('./products/detalle')
-    }
+    },
+    creacion: function (req, res){
+        res.render ('./products/creacion')
+    },
+    detalle: function (req, res){
+        res.render ('./products/detalle')
+    },
+    edicion: function (req, res){
+        res.render ('./products/edicion')
+    },
 }
 
 module.exports = controladorViews

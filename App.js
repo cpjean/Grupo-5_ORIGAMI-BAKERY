@@ -8,6 +8,10 @@ const publicpath = path.resolve (__dirname,'./Public')
 
 const rutaIndex= require ('./src/routes/rutaIndex');
 
+const methodOverride = require('method-override')
+
+app.use(methodOverride('_method'));
+
 app.use(express.static('public'))
 
 app.use(express.static(publicpath));
