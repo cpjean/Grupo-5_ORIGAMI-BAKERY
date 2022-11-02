@@ -14,20 +14,18 @@ router.get('/productos', rutaIndex.index)
 router.get('/productos/:id', rutaIndex.detalle)
 
 /* form de creacion y envio la info*/
-router.get('/products/create', rutaIndex.creacion)
+router.get('/productos/create', rutaIndex.creacion)
 router.post('/', rutaIndex.productos)
 
-/* Formulario de edición de productos */
+/* objtengo el form de edicion y lo cargo */
 router.get('/productos/:id/edicion', rutaIndex.edicion)
-
-/* Acción de edición (a donde se envía el formulario): */
-router.put('/productos/:id', rutaIndex.productos)
+router.put('/productos/:id', rutaIndex.update)
 
 /* Acción de borrado */
+router.delete('/productos/:id', rutaIndex.destroy)
+
+
 router.get('/', rutaIndex.index)
-
-
-
 
 router.get('/login', rutaIndex.ingreso)
 
@@ -38,5 +36,9 @@ router.get('/carrito', rutaIndex.carrito)
 router.get('/detalle', rutaIndex.detalle)
 
 router.get('/productos', rutaIndex.productos)
+
+router.get('/creacion', rutaIndex.creacion)
+
+router.get('/edicion', rutaIndex.edicion)
 
 module.exports = router;

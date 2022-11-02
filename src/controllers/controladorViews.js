@@ -1,6 +1,7 @@
 const path = require ('path')
 
 let controladorViews = {
+    
     index: function (req, res){
         res.render('index');
     },
@@ -18,16 +19,25 @@ let controladorViews = {
     },
     detalle: function (req, res){
         res.render ('./products/detalle')
-    },
-    creacion: function (req, res){
+    },  
+      creacion: function (req, res){
         res.render ('./products/creacion')
-    },
+    },  
+  
     detalle: function (req, res){
         res.render ('./products/detalle')
     },
     edicion: function (req, res){
         res.render ('./products/edicion')
     },
+
+    update: (req, res) => {
+        // Do the magic
+      },
+    
+      destroy: (req, res) => {
+        // Do the magic
+      },
 }
 
 module.exports = controladorViews
