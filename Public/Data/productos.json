@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "tipe": "panaderia",
+    "name": "Chipa (pan de queso)",
+    "description": "Elaborados con fecula de mandioca y quesos reggienito y pategras, apto para celiacos",
+    "img": "Imagenes/chipa.webp",
+    "price": 30
+  }, 
+  {
+    "id": 2,
+    "tipe": "panaderia",
+    "name": "Medialuna de manteca",
+    "description": "La clasica factura elaborada con un hojaldre 100% manteca",
+    "img": "Imagenes/medialuna.webp",
+    "price": 45
+  }, 
+  {
+    "id": 3,
+    "tipe": "pasteleria",
+    "name": "Muffin de zanahoria",
+    "description": "Esponjos y humedos muffins de zanahoria cubiertos de un delicioso glaseado",
+    "img": "Imagenes/muffinZanahoria.jpg",
+    "price": 50
+  }, 
+  {
+    "id": 4,
+    "tipe": "panaderia",
+    "name": "Pan trenzado",
+    "description": "Exquisito pan de tres piesas trenzadas y adornadas con sesamo",
+    "img": "Imagenes/pan.webp",
+    "price": 100
+  }, 
+  {
+    "id": 5,
+    "tipe": "pasteleria",
+    "name": "Cañon Relleno de Dulce de Leche",
+    "description": "Cañoncitos rellenos de Dulce de Leche, con masa casera de hojaldre simple y rápida",
+    "img": "Imagenes/CañonRellenoDDL.jpg",
+    "price": 120
+  }, 
+  {
+    "id": 6,
+    "tipe": "pasteleria",
+    "name": "Lemonpie",
+    "description": "Tarta de masa sucre de equilibrado contraste entre una acida crema de limon y un dulce merengue italiano",
+    "img": "Imagenes/lemon-pie.jpg",
+    "price": 450
+  }, 
+  {
+    "id": 7,
+    "tipe": "panaderia",
+    "name": "Baguette",
+    "description": "Pan clasico frances de crocante corteza ideal para sandwich",
+    "img": "Imagenes/baguette-1.jpg",
+    "price": 90
+  }, 
+  {
+    "id": 8,
+    "tipe": "panaderia",
+    "name": "Sanwich de miga",
+    "description": "Triples de miga. Jamón y Queso, Jamón y Tomate, Jamón y Huevo, Queso y Aceitunas y Queso y choclo.",
+    "img": "Imagenes/Sandwich-de-miga.jpg",
+    "price": 70
+  }, 
+  {
+    "id": 9,
+    "tipe": "evento",
+    "name": "Mesa dulce",
+    "description": "10 Mini tortas y tartas (Húmedo de Limón, de Chocolate, Brownie, Coco y dulce, Pasta Frola)",
+    "img": "Imagenes/mini-tortas.jpg",
+    "price": 20
+  }, 
+  {
+    "id": 10,
+    "tipe": "evento",
+    "name": "Lunch",
+    "description": "6 empanaditas de pollo, 6 empanaditas de carne, 6 triángulos de hojaldre y pollo, 8 vienitas con queso (salchichas envueltas en queso y masa), 6 bastones de muzzarella, 4 pizzetas de tomate y muzarella, 12 canastitas soufflé surtidas (mini tartas saladas)",
+    "img": "Imagenes/lunch.jpg",
+    "price": 3.200
+  }
+]
