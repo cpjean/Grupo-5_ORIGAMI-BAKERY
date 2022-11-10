@@ -8,7 +8,7 @@ const rutaIndex = require ('../controllers/controladorViews')
 /* llamamos al metodo que tenemos en el controlador, */
 
 /* listado de productos */
-router.get('/productos', rutaIndex.index)
+router.get('/productos', rutaIndex.productos)
 
 /* detalle de un producto */
 router.get('/productos/:id', rutaIndex.detalle)

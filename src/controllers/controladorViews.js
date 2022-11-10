@@ -1,5 +1,5 @@
 const path = require ('path')
-
+/* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 let controladorViews = {
     
     index: function (req, res){

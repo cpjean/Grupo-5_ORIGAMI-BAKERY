@@ -61,7 +61,8 @@ form{
 
 .campo button:hover{
     color: #FFF;
-    background-color: #016dcb
+    background-color: #016dcb;
+    transition: all .5s;
 }
 
 div label {
@@ -70,3 +71,23 @@ div label {
     align-items: center;
     text-align: center;
 }
+
+.delete-btn {
+     margin-top: 30px;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: red;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+
+  }
+
+.delete-btn:hover {
+    background-color: #6a040f;
+  }

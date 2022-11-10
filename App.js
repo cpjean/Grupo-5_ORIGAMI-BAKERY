@@ -8,6 +8,8 @@ const publicpath = path.resolve (__dirname,'./Public')
 
 const rutaIndex= require ('./src/routes/rutaIndex');
 
+const rutaProductos = require('./src/routes/rutaProductos')
+
 const methodOverride = require('method-override')
 
 app.use(methodOverride('_method'));
@@ -22,6 +24,8 @@ app.set ('views', './src/views')
 
 
 app.use('/', rutaIndex);
+
+app.use('/productos',rutaProductos)
 
 app.use('/login', rutaIndex);
 
