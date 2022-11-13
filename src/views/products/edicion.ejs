@@ -54,6 +54,11 @@
                     <div class="campo input-campo">
                         <button>Modificar</button>
                     </div>
+                    <div class="campo input-campo">
+                        <form method="POST" action="/producto/<%= producto.id %>?_method=DELETE">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                    </div>
                 
                 </form>
 

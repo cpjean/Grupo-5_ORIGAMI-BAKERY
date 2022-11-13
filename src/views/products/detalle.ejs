@@ -3,17 +3,16 @@
 <head>
     <%- include ('../partials/head') %> 
     <link href="css/Detalle.css" rel="stylesheet">
-    <title>Productos</title>
+    <title>Producto</title>
 </head>
 <body>
     <%- include ('../partials/header') %> 
-
 
     <main class="container">
         <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
         
         <div class="left-column">
-            <img src="Imagenes/CañonRellenoDDL.jpg" alt="Cañon Relleno DDL">
+            <img src="<%= producto.img %> " alt="imagen del producto">
         </div>
 
         <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
@@ -22,9 +21,9 @@
         
           <!-- Descripcion de Producto -->
           <div class="product-description">
-            <span>Facturas</span>
-            <h1>Cañon Relleno de Dulce de Leche</h1>
-            <p>Cañoncitos rellenos de Dulce de Leche, con masa casera de hojaldre simple y rápida.</p>
+            <span><%= producto.tipe %></span>
+            <h1><%= producto.name %></h1>
+            <p><%= producto.description %></p>
           </div>
        
           <!-- Cantidad -->
@@ -35,14 +34,16 @@
 
           <!-- Precio -->
           <div class="product-price">Precio:
-            <span>120$</span>
+            <span>$<%= producto.price %></span>
           </div>
 
           <!-- Añadir al Carrito-->
           <div>
             <a href="/carrito" class="cart-btn">Añadir al Carrito</a>
           </div>
-
+          <div>
+            <a href="/productos/<%= producto.id %>/edicion" class="cart-btn">Editar</a>
+          </div>
         </div>
     
     </main> 

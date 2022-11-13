@@ -8,7 +8,7 @@ const rutaIndex = require ('../controllers/controladorViews')
 /* llamamos al metodo que tenemos en el controlador, */
 
 /* listado de productos */
-router.get('/productos', rutaIndex.index)
+router.get('/productos', rutaIndex.productos)
 
 /* detalle de un producto */
 router.get('/productos/:id', rutaIndex.detalle)
@@ -19,10 +19,12 @@ router.post('/', rutaIndex.productos)
 
 /* objtengo el form de edicion y lo cargo */
 router.get('/productos/:id/edicion', rutaIndex.edicion)
-router.put('/productos/:id', rutaIndex.update)
+router.put('/productos/:id', rutaIndex.edicion)
 
 /* Acción de borrado */
-router.delete('/productos/:id', rutaIndex.destroy)
+router.delete('/producto/:id', function(req,res){
+    res.send('Producto eliminado')
+})
 
 
 router.get('/', rutaIndex.index)
