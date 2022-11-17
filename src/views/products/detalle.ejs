@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %> 
-    <link href="css/Detalle.css" rel="stylesheet">
+    <link href="Css/Detalle.css" rel="stylesheet">
     <title>Producto</title>
 </head>
+
 <body>
+
     <%- include ('../partials/header') %> 
 
     <main class="container">
         <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
         
         <div class="left-column">
-            <img src="<%= producto.img %> " alt="imagen del producto">
+            <img src="<%= producto.img %>" alt="imagen del producto">
         </div>
 
         <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
@@ -51,8 +53,5 @@
     <%- include ('../partials/footer') %> 
 
 </body>
-</html>
 
-    
-</body>
 </html>

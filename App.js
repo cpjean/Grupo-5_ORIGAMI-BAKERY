@@ -7,7 +7,9 @@ const path = require ('path');
 
 const publicpath = path.resolve (__dirname,'./Public')
 
-const rutaIndex= require ('./src/routes/rutaIndex');
+const rutaIndex= require ('./src/routes/rutaIndex.js');
+const rutaProductos= require ('./src/routes/rutaProductos.js');
+const rutaCarrito= require ('./src/routes/rutaCarrito.js');
 
 const methodOverride = require('method-override')
 
@@ -25,19 +27,9 @@ app.set ('views', './src/views')
 // ruteo de las vistas
 app.use('/', rutaIndex);
 
-app.use('/login', rutaIndex);
+app.use('/productos', rutaProductos);
 
-app.use('/registro', rutaIndex);
-
-app.use('/productos', rutaIndex);
-
-app.use('/carrito', rutaIndex);
-
-app.use('/detalle', rutaIndex);
-
-app.use('/creacion', rutaIndex);
-
-app.use('edicion', rutaIndex);
+app.use('/carrito', rutaCarrito);
 
 // corre el servidor
 app.listen (3030, ()=>{

@@ -3,7 +3,7 @@
 <head>
     <%- include ('../partials/head') %> 
     <link href="css/Index.css" rel="stylesheet">
-    <link href="css/productos.css" rel="stylesheet">
+    <link href="css/Productos.css" rel="stylesheet">
     <title>Productos</title>
 </head>
 
@@ -17,9 +17,10 @@
             
             <% productos.forEach(product => { %> 
                 <article class="card">
-                    <a href="/detalle/<%= product.id %>"></a>
+                    <a href="/productos/detalle/<%= product.id %>">
                     <img src="<%= product.img %>" class="imagen-producto">
-                    <h3 class="descripcion"> <%= product.name %> ><br><br>$<%= product.price %> c/u</h3>
+                    <h3 class="descripcion"> <%= product.name %><br><br>$<%= product.price %> c/u</h3>
+                    </a>
                 </article>
             <% }) %> 
         </section>
