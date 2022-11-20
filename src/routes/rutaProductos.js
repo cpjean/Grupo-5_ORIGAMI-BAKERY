@@ -10,19 +10,17 @@ const rutaProductos = require ('../controllers/controladorProductos');
 router.get('/', rutaProductos.productos);
 
 /* detalle de un producto */
-router.get('/detalle/:id', rutaProductos.detalle);
+router.get('/:id/detalle', rutaProductos.detalle);
 
 /* form de creacion y envio la info*/
-router.get('/productos/create', rutaProductos.creacion);
+router.get('/create', rutaProductos.creacion);
 router.post('/', rutaProductos.productos);
 
 /* objtengo el form de edicion y lo cargo */
 router.get('/:id/edicion', rutaProductos.edicion);
-router.put('/detalle/:id', rutaProductos.edicion);
+router.put('/:id/detalle', rutaProductos.edicion);
 
 /* Acción de borrado */
-router.delete('/detalle/:id', function(req,res){
-    res.send('Producto eliminado')
-});
+router.delete('/:id/edicion', rutaProductos.destroy);
 
 module.exports = router;

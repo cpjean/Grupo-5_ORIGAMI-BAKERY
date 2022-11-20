@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('../partials/head') %> 
-    <link href="Css/Detalle.css" rel="stylesheet">
+    <%- include ('../partials/head') %>
+    <link href="/css/detalle.css" rel="stylesheet">
     <title>Producto</title>
 </head>
 
@@ -14,7 +14,7 @@
         <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
         
         <div class="left-column">
-            <img src="<%= producto.img %>" alt="imagen del producto">
+            <img src="/Imagenes/<%= producto.img %>" alt="<%= producto.img %>">
         </div>
 
         <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
@@ -36,7 +36,7 @@
 
           <!-- Precio -->
           <div class="product-price">Precio:
-            <span>$<%= producto.price %></span>
+            <span>$ <%= producto.price %> <%= producto.cantidad %></span>
           </div>
 
           <!-- Añadir al Carrito-->
@@ -44,7 +44,7 @@
             <a href="/carrito" class="cart-btn">Añadir al Carrito</a>
           </div>
           <div>
-            <a href="/productos/<%= producto.id %>/edicion" class="cart-btn">Editar</a>
+            <a href="/productos/<%= producto.id %>/edicion" class="cart-btn editar">Editar</a>
           </div>
         </div>
     

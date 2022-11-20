@@ -109,7 +109,10 @@
 .cart-btn:hover {
     background-color: #5b8b41;
   }
-
+.editar {
+  margin-top: 10px;
+  background-color: #80bb6078;
+}
   /* Responsive */
 @media (max-width: 940px) {
     .container {

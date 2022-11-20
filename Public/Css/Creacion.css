@@ -70,3 +70,22 @@ div label {
     align-items: center;
     text-align: center;
 }
+
+.eliminar form {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+.eliminar button {
+    width: 100%;
+    height: 45px;
+    color: #FFF;
+    background-color: #01c5d3;
+    transition: all 0.3s ;
+    cursor: pointer;
+}
+
+.eliminar button:hover{
+    color: #FFF;
+    background-color: #016dcb
+}

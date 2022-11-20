@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %> 
-    <link href="css/Creacion.css" rel="stylesheet">
+    <link href="/css/creacion.css" rel="stylesheet">
     <title>Añadir Producto</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
 
                 <header class="reg">Añadir Producto</header>
 
-                <form action="#">
+                <form action="/productos" method="post">
 
                     <div class="campo input-campo">
                         <label for="Nombre">Nombre de Producto:  </label>
@@ -39,14 +39,17 @@
                         <select name="categorias" id="categorias">
                             <option value="pasteleria">Pastelería</option>
                             <option value="panaderia">Panadería</option>
-                            <option value="salados">Salados</option>
-                            <option value="facturas">Facturas</option>
+                            <option value="evento">Eventos</option>
                         </select>
                     </div>
 
                     <div class="campo input-campo">
                         <label for="cantidad">Cantidad:  </label>
-                        <input type="number" id="cantidad" name="cantidad" value="1">
+                        <select name="cantidad" id="cantidad">
+                            <option value="c/u">c/u</option>
+                            <option value="el kg">el kg</option>
+                            <option value="combo">Combo</option>
+                        </select>
                     </div>
                     
                     <div class="campo input-campo">

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %> 
-    <link href="css/Index.css" rel="stylesheet">
-    <link href="css/Productos.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/productos.css" rel="stylesheet">
     <title>Productos</title>
 </head>
 
@@ -17,9 +17,9 @@
             
             <% productos.forEach(product => { %> 
                 <article class="card">
-                    <a href="/productos/detalle/<%= product.id %>">
-                    <img src="<%= product.img %>" class="imagen-producto">
-                    <h3 class="descripcion"> <%= product.name %><br><br>$<%= product.price %> c/u</h3>
+                    <a href="/productos/<%= product.id %>/detalle">
+                    <img src="/Imagenes/<%= product.img %>" class="imagen-producto">
+                    <h3 class="descripcion"> <%= product.name %><br><br>$<%= product.price %> <%= product.cantidad %></h3>
                     </a>
                 </article>
             <% }) %> 
