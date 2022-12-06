@@ -10,9 +10,8 @@ const rutaIndex = require ('../controllers/controladorViews')
 /* index */
 router.get('/', rutaIndex.index)
 
-router.get('/login', rutaIndex.ingreso)
+router.get('/nosotros', rutaIndex.nosotros)
 
-router.get('/registro', rutaIndex.registro)
 
 
 module.exports = router;

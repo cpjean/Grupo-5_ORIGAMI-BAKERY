@@ -7,12 +7,15 @@ const path = require ('path');
 
 const methodOverride = require('method-override')
 
-const publicpath = path.resolve (__dirname,'./Public')
+const publicpath = path.resolve (__dirname,'./Public');
+
+const session = require('express-session')
 
 // rutas
 const rutaIndex= require ('./src/routes/rutaIndex.js');
 const rutaProductos= require ('./src/routes/rutaProductos.js');
 const rutaCarrito= require ('./src/routes/rutaCarrito.js');
+const rutaUsers= require ('./src/routes/rutaUsers.js');
 
 
 
@@ -33,6 +36,8 @@ app.use('/', rutaIndex);
 app.use('/productos', rutaProductos);
 
 app.use('/carrito', rutaCarrito);
+
+app.use('/user', rutaUsers)
 
 // corre el servidor
 app.listen (3030, ()=>{
