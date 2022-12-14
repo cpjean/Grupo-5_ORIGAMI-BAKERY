@@ -1,11 +1,8 @@
 
-.container {
-    width: 100%;
-}
 
 .form{
+
     max-width: 430px;
-    margin: 150px auto 5px;
     width: 90%;
     padding: 30px;
     border-radius: 6px ;
@@ -64,8 +61,6 @@ form{
     color: #FFF;
     background-color: #016dcb
 }
-
-
 
 div label {
     display: flex;

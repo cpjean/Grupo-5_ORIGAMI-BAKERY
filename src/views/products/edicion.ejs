@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %> 
-    <link href="/css/creacion.css" rel="stylesheet">
+    <link href="/css/edicion.css" rel="stylesheet">
     <title>Editar Producto</title>
 </head>
 <body>
@@ -10,12 +10,62 @@
     <%- include ('../partials/header') %> 
 
     <section class="container forms">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <%- include ('../partials/head') %>
+            <link href="/css/detalle.css" rel="stylesheet">
+            <title>Producto</title>
+        </head>
+        
+        <body>
+        
+            <%- include ('../partials/header') %> 
+        
+            <main>
 
+
+            <section class="container.forms">
+                <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
+                
+                <div class="left-column">
+                    <img src="/Imagenes/<%= producto.img %>" alt="<%= producto.img %>">
+                </div>
+        
+                <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
+        
+                <div class="right-column">
+                
+                  <!-- Descripcion de Producto -->
+                  <div class="product-description">
+                    <span><%= producto.tipe %></span>
+                    <h1><%= producto.name %></h1>
+                    <p><%= producto.description %></p>
+                  </div>
+               
+                  <!-- Cantidad -->
+                  <div class="cantidad-configuration">
+                    <span>Cantidad</span>
+                    <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
+                  </div>
+        
+                  <!-- Precio -->
+                  <div class="product-price">Precio:
+                    <span>$ <%= producto.price %> <%= producto.cantidad %></span>
+                  </div>
+        
+                  <!-- Añadir al Carrito-->
+            </section>
+            </main> 
+        
+            <%- include ('../partials/footer') %> 
+        
         <div class="form login">
             
             <div class="form-content">
 
                 <header class="reg">Editar Producto</header>
+                
 
                 <form action="/edicion" ?_method="put">
 
