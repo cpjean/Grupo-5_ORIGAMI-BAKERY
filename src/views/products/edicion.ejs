@@ -67,7 +67,7 @@
                 <header class="reg">Editar Producto</header>
                 
 
-                <form action="/edicion" ?_method="put">
+                <form action="/<%= producto.id %>/detalle" ?_method="put">
 
                     <div class="campo input-campo">
                         <label for="Nombre">Producto:</label>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="campo input-campo">
-                        <button>Modificar</button>
+                        <button type="submit">Modificar</button>
                     </div> 
 
                 </form>

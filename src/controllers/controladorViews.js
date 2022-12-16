@@ -7,11 +7,8 @@ let controladorViews = {
     index: function (req, res){
         res.render (path.join('../views/index.ejs'));
     },
-    ingreso: function (req, res){
-        res.render ('./users/login.ejs')
-    },
-    registro: function (req, res){
-        res.render ('./users/registro.ejs')
+    nosotros: function (req, res){
+        res.render (path.join('../views/nosotros.ejs'));
     },
 };
 

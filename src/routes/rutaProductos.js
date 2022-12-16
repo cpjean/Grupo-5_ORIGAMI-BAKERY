@@ -18,7 +18,7 @@ router.post('/', rutaProductos.productos);
 
 /* objtengo el form de edicion y lo cargo */
 router.get('/:id/edicion', rutaProductos.edicion);
-router.put('/:id/detalle', rutaProductos.edicion);
+router.put('/:id/detalle', rutaProductos.update);
 
 /* Acción de borrado */
 router.delete('/:id/edicion', rutaProductos.destroy);
