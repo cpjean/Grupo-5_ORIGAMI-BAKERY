@@ -1,7 +1,7 @@
 const fs = require ('fs');
 const path = require ('path');
 
-let productos = fs.readFileSync(path.resolve('Public/Data/productos.json'),{encoding: 'utf-8'});
+let productos = fs.readFileSync(path.resolve('src/data/productos.json'),{encoding: 'utf-8'});
 productos= JSON.parse(productos);
 
 let controladorCarrito = {

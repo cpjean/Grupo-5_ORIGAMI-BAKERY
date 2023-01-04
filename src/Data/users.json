@@ -1,37 +1,42 @@
 [
-    {
-        "id": 1,
-        "name":"Santiago",
-        "categoria":"user",
-        "email":"santiago_mori-93@hotmail.com",
-        "contraseña":"hola1234"
-    },
-    {
-        "id": 2,
-        "name":"Leisha",
-        "categoria":"admin",
-        "email":"zaldwich4@vkontakte.ru",
-        "contraseña":"9ZUcIWAB"
-    },
-    {
-        "id": 3,
-        "name":"Lucho",
-        "categoria":"user",
-        "email":"lorpen7@senate.gov",
-        "contraseña":"xQYHEZYDak4"
-    },
-    {
-        "id": 4,
-        "name":"Lutero",
-        "categoria":"user",
-        "email":"jbohlmann5@google.co.jp",
-        "contraseña":"uQOgDqp"
-    },
-    {
-        "id": 5,
-        "name":"Gianna",
-        "categoria":"user",
-        "email":"gbeardsell1@disqus.com",
-        "contraseña":"MzG9d0d"
-    }
+ {
+  "id": 1,
+  "avatar": "",
+  "name": "Santiago",
+  "category": "user",
+  "email": "santiago_mori-93@hotmail.com",
+  "password": "hola1234"
+ },
+ {
+  "id": 2,
+  "avatar": "",
+  "name": "Leisha",
+  "category": "admin",
+  "email": "zaldwich4@vkontakte.ru",
+  "password": "9ZUcIWAB"
+ },
+ {
+  "id": 3,
+  "avatar": "",
+  "name": "Lucho",
+  "category": "user",
+  "email": "lorpen7@senate.gov",
+  "password": "xQYHEZYDak4"
+ },
+ {
+  "id": 4,
+  "avatar": "",
+  "name": "Lutero",
+  "category": "user",
+  "email": "jbohlmann5@google.co.jp",
+  "password": "uQOgDqp"
+ },
+ {
+  "id": 5,
+  "avatar": "",
+  "name": "Gianna",
+  "category": "user",
+  "email": "gbeardsell1@disqus.com",
+  "password": "MzG9d0d"
+ }
 ]

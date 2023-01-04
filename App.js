@@ -5,11 +5,11 @@ const app = express ();
 
 const path = require ('path');
 
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 
 const publicpath = path.resolve (__dirname,'./Public');
 
-const session = require('express-session')
+const session = require('express-session');
 
 // rutas
 const rutaIndex= require ('./src/routes/rutaIndex.js');
@@ -26,9 +26,13 @@ app.use(express.static('public'))
 
 app.use(express.static(publicpath));
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
-app.set ('views', './src/views')
+app.set ('views', './src/views');
+
+app.use (session({secret:'medialuna'}));
+
+app.use(express.urlencoded({extended: false}));
 
 // ruteo de las vistas
 app.use('/', rutaIndex);
@@ -37,7 +41,7 @@ app.use('/productos', rutaProductos);
 
 app.use('/carrito', rutaCarrito);
 
-app.use('/user', rutaUsers)
+app.use('/user', rutaUsers);
 
 // corre el servidor
 app.listen (3030, ()=>{
