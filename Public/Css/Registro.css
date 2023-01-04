@@ -173,6 +173,10 @@ Tengo que arreglar el tema del ojito en el password xd
     padding: 0 15px;
 }
 
+.text-danger{
+    color: #d62828;
+}
+
 @media (min-width: 1200px) {
     /*-------------------- HEADER --------------------------*/
     /*-----------------LOGO-------------------*/

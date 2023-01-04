@@ -1,6 +1,6 @@
 [
  {
-  "cantidad": "el kg",
+  "lot": "el kg",
   "id": 1,
   "tipe": "panaderia",
   "name": "Chipa (pan de queso)",
@@ -10,6 +10,24 @@
  },
  {
   "cantidad": "c/u",
+  "id": 2,
+  "tipe": "panaderia",
+  "name": "Medialuna de manteca",
+  "description": "La clasica factura elaborada con un hojaldre 100% manteca",
+  "img": "medialuna.webp",
+  "price": 45
+ },
+ {
+  "cantidad": "c/u",
+  "id": 3,
+  "tipe": "pasteleria",
+  "name": "Muffin de zanahoria",
+  "description": "Esponjos y humedos muffins de zanahoria cubiertos de un delicioso glaseado",
+  "img": "muffinZanahoria.jpg",
+  "price": 50
+ },
+ {
+  "lot": "c/u",
   "id": 4,
   "tipe": "panaderia",
   "name": "Pan trenzado",
@@ -18,7 +36,7 @@
   "price": 100
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 5,
   "tipe": "pasteleria",
   "name": "Cañon Relleno de Dulce de Leche",
@@ -27,7 +45,7 @@
   "price": 120
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 6,
   "tipe": "pasteleria",
   "name": "Lemonpie",
@@ -36,7 +54,7 @@
   "price": 450
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 7,
   "tipe": "panaderia",
   "name": "Baguette",
@@ -45,7 +63,7 @@
   "price": 90
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 8,
   "tipe": "panaderia",
   "name": "Sanwich de miga",
@@ -54,7 +72,7 @@
   "price": 70
  },
  {
-  "cantidad": "combo",
+  "lot": "combo",
   "id": 9,
   "tipe": "evento",
   "name": "Mesa dulce",
@@ -63,7 +81,7 @@
   "price": 20
  },
  {
-  "cantidad": "combo",
+  "cantidad":"combo",
   "id": 10,
   "tipe": "evento",
   "name": "Lunch",
