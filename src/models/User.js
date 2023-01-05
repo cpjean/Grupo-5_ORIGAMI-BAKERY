@@ -1,5 +1,6 @@
 const fs = require ('fs');
 const path = require ('path');
+const multer = require('multer');
 
 const User = {
     getData: function (){
@@ -25,7 +26,11 @@ const User = {
         let allUsers = this.findAll();
         let newUser = {
             id: this.generateId(),
-            ...userData
+            avatar: userData.avatar,
+            name: userData.name,
+            category: "user",
+            email: userData.email,
+            password: userData.password
         }
         allUsers.push(newUser);
         fs.writeFileSync(path.resolve('src/data/users.json'), JSON.stringify(allUsers, null, ' '));
@@ -38,5 +43,4 @@ const User = {
         return true
     }
 }
-
 module.exports= User

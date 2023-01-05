@@ -3,6 +3,7 @@ const fs = require ('fs');
 const path = require ('path');
 const { receiveMessageOnPort } = require('worker_threads');
 const User = require ('../models/User')
+const bcryptjs = require('bcryptjs')
 
 let users = fs.readFileSync(path.resolve('src/data/users.json'),{encoding: 'utf-8'});
 users= JSON.parse(users);
@@ -21,8 +22,13 @@ let controladorUsers = {
                 oldData: req.body
             });
         }
-        User.create(req.body)
-        return res.render (path.join('../views/index.ejs'));
+      let userToCreate = {
+        ...req.body,
+        password: bcryptjs.hashSync(req.body.password,10),
+        avatar: req.file.filename
+      } 
+        User.create(userToCreate)
+        return res.redirect ('/');
     },
     ingreso: function (req, res){
         res.render ('./users/login.ejs')
@@ -48,9 +54,9 @@ let controladorUsers = {
             }
             if (usuarioALoguearse == undefined){
                 return res.render('login', {errors:[{msg: 'Usuario invalido'}]})
-            }
+            } else {
             req.session.usuarioLogueado = usuarioALoguearse;
-            res.render (path.join('../views/index.ejs'));
+            res.redirect ('/')};
         }
         else {
             return res.render('/login', {errors:errors.errors})
