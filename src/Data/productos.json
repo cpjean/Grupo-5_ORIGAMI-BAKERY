@@ -9,7 +9,7 @@
   "price": 30
  },
  {
-  "lot": "c/u",
+  "cantidad": "c/u",
   "id": 2,
   "tipe": "panaderia",
   "name": "Medialuna de manteca",
@@ -18,7 +18,7 @@
   "price": 45
  },
  {
-  "lot": "c/u",
+  "cantidad": "c/u",
   "id": 3,
   "tipe": "pasteleria",
   "name": "Muffin de zanahoria",
@@ -81,12 +81,12 @@
   "price": 20
  },
  {
-  "lot":"combo",
+  "cantidad":"combo",
   "id": 10,
   "tipe": "evento",
   "name": "Lunch",
   "description": "6 empanaditas de pollo, 6 empanaditas de carne, 6 triángulos de hojaldre y pollo, 8 vienitas con queso (salchichas envueltas en queso y masa), 6 bastones de muzzarella, 4 pizzetas de tomate y muzarella, 12 canastitas soufflé surtidas (mini tartas saladas)",
   "img": "lunch.jpg",
   "price": 3200
-}
+ }
 ]

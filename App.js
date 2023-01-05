@@ -45,5 +45,5 @@ app.use('/user', rutaUsers);
 
 // corre el servidor
 app.listen (3030, ()=>{
-    console.log ('Servidor corriendo')
+    console.log ('Servidor corriendo en el 3030')
 });
