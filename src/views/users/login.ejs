@@ -13,14 +13,19 @@
         <div class="form login">
             <div class="form-content">
                 <header class="reg">Iniciar Sesion</header>
-                <form action="/user/login" method="POST" enctype="multipart/form-data">
+                <form action="/user/login" method="POST">
 
                     <div class="campo input-campo">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" placeholder="Email" class="input" name="email">
+                        <% if (locals.errors && errors.email) {%>
+                            <div class="text-danger">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="campo input-campo">
-                        <input type="password" placeholder="Contraseña" class="input">
+                        <input type="password" placeholder="Contraseña" class="input" name="password">
                         <!-- <i class="fa-regular fa-eye-slash"></i> -->
                     </div>
                     
@@ -29,7 +34,7 @@
                     </div>
 
                     <div class="campo input-campo">
-                        <button>Login</button>
+                        <button type="submit">Login</button>
                     </div>
                 
                     

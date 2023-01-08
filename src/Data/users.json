@@ -4,7 +4,7 @@
   "avatar": "",
   "name": "Santiago",
   "category": "user",
-  "email": "santiago_mori-93@hotmail.com",
+  "email": "santiago_mori-93@hotmail.comm",
   "password": "hola1234"
  },
  {
@@ -38,5 +38,13 @@
   "category": "user",
   "email": "gbeardsell1@disqus.com",
   "password": "MzG9d0d"
+ },
+ {
+  "id": 6,
+  "avatar": "1673206189416_img.jpg",
+  "name": "Santiago Agustin",
+  "category": "user",
+  "email": "santiago_mori-93@hotmail.com",
+  "password": "$2a$10$2sIx.gla5LcSruRd13LsZuCeOnE7wDsVmJw9QaiHsKOqEv.D/tZzG"
  }
 ]

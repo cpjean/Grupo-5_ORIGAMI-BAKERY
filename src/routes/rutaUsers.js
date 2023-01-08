@@ -5,15 +5,23 @@ const router = express.Router();
 // requerimiento de middlewares
 const multerMid = require('../middlewares/multerMid');
 const validarMid = require('../middlewares/validacionRegMid');
+const logMid = require('../middlewares/logueadoMid');
 
 /* requerimos el controlador de Users */
 const rutaUsers = require ('../controllers/controladorUsers');
 
+// ruta de login
+router.get('/login', logMid, rutaUsers.ingreso);
+router.post('/login', validarMid, rutaUsers.processLogin);
 
-router.get('/login', rutaUsers.ingreso)
-router.post('/login', validarMid, rutaUsers.processLogin)
+// ruta de registro
+router.get('/registro', logMid, rutaUsers.registro);
+router.post('/registro', multerMid.single('avatar'), validarMid, rutaUsers.processRegistro);
 
-router.get('/registro', rutaUsers.registro)
-router.post('/registro', multerMid.single('avatar'), validarMid, rutaUsers.processRegistro)
+// ruta de perfil
+router.get('/perfil', rutaUsers.perfil);
+
+// ruta logout
+router.get('/logout', rutaUsers.logout);
 
 module.exports = router;
