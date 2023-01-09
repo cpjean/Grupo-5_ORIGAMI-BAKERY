@@ -13,16 +13,27 @@
                 <li class="minimisar"><a href="/">Inicio</a></li>
                 <li class="productos"><a href="#">Productos</a>
                     <ul class="sub-menu">
-                        <li><a href="/productos/create">Crear</a></li>
                         <li><a href="/productos">Todo</a></li>
                         <li><a href="/panaderia">Panaderia</a></li>
                         <li><a href="/confiteria">Confiteria</a></li>
                         <li><a href="/eventos">Eventos</a></li>
                     </ul>
                 </li>
-                <li class="minimisar"><a href="/carrito">Carrito</a></li>
+                <% if (locals.admin) { %> 
+                <li><a href="/productos/create">Crear</a></li> 
+                <% } %>
                 <li class="minimisar"><a href="/nosotros">Nosotros</a></li>
+                <% if (locals.logged) { %> 
+                <li class="minimisar"><a href="/carrito">Carrito</a></li>
+                <li class="productos"><a href="#"><%= userLog.name %></a>
+                    <ul class="sub-menu">
+                        <li><a href="/user/perfil">Perfil</a></li>
+                        <li><a href="/user/logout">Salir</a></li>
+                    </ul>
+                </li>
+                <% } else { %> 
                 <li class="minimisar"><a href="/user/login">Ingresá</a></li>
+                <% } %> 
             </ul>
         
         </nav>

@@ -54,14 +54,14 @@
   "price": 450
  },
  {
-  "lot": "c/u",
-  "id": 7,
-  "tipe": "panaderia",
-  "name": "Baguette",
-  "description": "Pan clasico frances de crocante corteza ideal para sandwich",
-  "img": "baguette-1.jpg",
-  "price": 90
- },
+    "lot": "c/u",
+    "id": 7,
+    "tipe": "panaderia",
+    "name": "Baguette",
+    "description": "Pan clasico frances de crocante corteza ideal para sandwich",
+    "img": "baguette-1.jpg",
+    "price": 90
+},
  {
   "lot": "c/u",
   "id": 8,

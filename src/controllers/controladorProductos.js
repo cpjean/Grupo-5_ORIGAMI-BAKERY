@@ -25,13 +25,13 @@ let controladorProductos = {
     // renderizo la pagina de detalle de un producto segun el id
     detalle: function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = Producto.findByField (idEdit);
+        let producto = Producto.findByField ('id', idEdit);
         res.render ('../views/products/detalle.ejs',{ producto })
     }, 
     // renderizo la pagina de edicion de un producto segun el id
     edicion: function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = Producto.findByField (idEdit);
+        let producto = Producto.findByField ('id', idEdit);
         res.render ('../views/products/edicion.ejs',{producto})
     },
     // edito un producto

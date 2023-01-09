@@ -6,6 +6,7 @@ const router = express.Router();
 const multerMid = require('../middlewares/multerMid');
 const validarMid = require('../middlewares/validacionRegMid');
 const logMid = require('../middlewares/logueadoMid');
+const authMid = require('../middlewares/authMid');
 
 /* requerimos el controlador de Users */
 const rutaUsers = require ('../controllers/controladorUsers');
@@ -19,7 +20,7 @@ router.get('/registro', logMid, rutaUsers.registro);
 router.post('/registro', multerMid.single('avatar'), validarMid, rutaUsers.processRegistro);
 
 // ruta de perfil
-router.get('/perfil', rutaUsers.perfil);
+router.get('/perfil', authMid, rutaUsers.perfil);
 
 // ruta logout
 router.get('/logout', rutaUsers.logout);

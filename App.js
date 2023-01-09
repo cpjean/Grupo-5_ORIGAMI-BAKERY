@@ -5,6 +5,11 @@ const path = require ('path');
 const methodOverride = require('method-override');
 const publicpath = path.resolve (__dirname,'./Public');
 const session = require('express-session');
+const cookies = require ('cookie-parser')
+
+// middlewares
+const usuarioLoggedMid = require ('./src/middlewares/usuarioLoggedMid')
+const adminMid = require ('./src/middlewares/adminMid')
 
 // rutas
 const rutaIndex= require ('./src/routes/rutaIndex.js');
@@ -29,7 +34,13 @@ app.use (session({
     saveUninitialized: false,
 }));
 
-app.use(express.urlencoded({extended: false}));
+app.use (cookies());
+
+app.use (express.urlencoded({extended: false}));
+
+app.use (usuarioLoggedMid);
+
+app.use (adminMid);
 
 // ruteo de las vistas
 app.use('/', rutaIndex);

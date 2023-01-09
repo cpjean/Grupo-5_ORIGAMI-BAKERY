@@ -5,9 +5,6 @@ const { receiveMessageOnPort } = require('worker_threads');
 const User = require ('../models/User')
 const bcryptjs = require('bcryptjs')
 
-let users = fs.readFileSync(path.resolve('src/data/users.json'),{encoding: 'utf-8'});
-users= JSON.parse(users);
-
 let controladorUsers = {
     // renderizado de la vista de registro
     registro: function (req, res){

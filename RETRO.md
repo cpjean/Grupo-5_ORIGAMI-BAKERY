@@ -8,3 +8,6 @@ Hablando de lo realizado en el sprint 1, hicimos ciertas cosas, y algunas otras 
 
 <!------------------------ SPRINT 3 ------------------------->
 En lineas generales creemos que hicimos un trabajo mas prolijo que la vez anterior, si bien hay puntos que aun debemos mejorar como las weekly´s logramos cumplir los objetivos en tiempo y forma. En cuanto la division de trabajo fue pareja y todos nos pudimos poner de acuerdo en cuanto a nuestras tareas.
+
+<!------------------------ SPRINT 4 y 5 ------------------------->
+En ambos sprints nos vimos enormemente descordinados tanto para asignar tareas como para coordinar reuniones para resolver los sprints. Por otro lado tenemos problemas a la hora de resoluciones de forma individual.
