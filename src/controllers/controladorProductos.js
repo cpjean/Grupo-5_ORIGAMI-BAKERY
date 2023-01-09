@@ -9,6 +9,12 @@ let controladorProductos = {
     productos: function (req, res){
         res.render ('../views/products/productos.ejs',{productos})
     },
+    // renderizo la pagina de "productos" de algun tipo
+    productosEspecificos: function (req, res){
+        let tipeEdit = req.params.producto
+        let productos = Producto.filterByField ('tipe', tipeEdit);
+        res.render ('../views/products/productos.ejs',{productos})
+    },    
     // renderizo la pagina de "creacion"
     creacion: function (req, res){
         res.render ('../views/products/creacion.ejs')

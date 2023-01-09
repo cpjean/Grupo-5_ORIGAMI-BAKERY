@@ -46,5 +46,13 @@
   "category": "admin",
   "email": "santiago_mori-93@hotmail.com",
   "password": "$2a$10$2sIx.gla5LcSruRd13LsZuCeOnE7wDsVmJw9QaiHsKOqEv.D/tZzG"
+ },
+ {
+  "id": 7,
+  "avatar": "1673296965238_img.jpg",
+  "name": "San",
+  "category": "user",
+  "email": "santi@gmail.com",
+  "password": "$2a$10$rRqkL5lmaabs1g9NF2HA/OoBbp8LVSKvjf4iEkCCZsylwdzDBYdnq"
  }
 ]

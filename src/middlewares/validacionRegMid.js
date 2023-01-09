@@ -1,6 +1,7 @@
 const {body} = require('express-validator');
 const path= require('path');
 
+
 // creo las validaciones para login y registro, que no quede el campo vacio o se envia un mensaje
 module.exports = [
     body('email')

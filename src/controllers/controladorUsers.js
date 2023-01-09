@@ -40,6 +40,7 @@ let controladorUsers = {
         password: bcryptjs.hashSync(req.body.password,10),
         avatar: req.file.filename
       } 
+      console.log(userToCreate)
       // usamos el metodo del modelo User.js para crear
         User.create(userToCreate)
       // redirigimos al index

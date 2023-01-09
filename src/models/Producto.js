@@ -21,6 +21,12 @@ const Producto = {
     findAll: function (){
         return this.getData();
     },
+    // retorno todos los productos de algun tipo
+    filterByField: function (field, contenido){
+        let allProducts = this.findAll();
+        let product = allProducts.filter(producto => producto[field] === contenido);
+        return product;
+    },
     // busco un producto especifico
     findByField: function (field, contenido){
         let allProducts = this.findAll();

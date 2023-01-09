@@ -35,17 +35,21 @@
           </div>
 
           <!-- Precio -->
-          <div class="product-price">Precio:
-            <span>$ <%= producto.price %> <%= producto.cantidad %></span>
+          <div class="product-price">Precio: 
+            <span> $ <%= producto.price %> <%= producto.lot %></span>
           </div>
 
           <!-- Añadir al Carrito-->
+          <% if (locals.logged) { %> 
           <div>
             <a href="/carrito" class="cart-btn">Añadir al Carrito</a>
           </div>
+          <% } %> 
+          <% if (locals.admin) { %>
           <div>
             <a href="/productos/<%= producto.id %>/edicion" class="cart-btn editar">Editar</a>
           </div>
+          <% } %> 
         </div>
     
     </main> 
