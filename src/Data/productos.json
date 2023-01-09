@@ -9,7 +9,7 @@
   "price": 30
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 2,
   "tipe": "panaderia",
   "name": "Medialuna de manteca",
@@ -18,7 +18,7 @@
   "price": 45
  },
  {
-  "cantidad": "c/u",
+  "lot": "c/u",
   "id": 3,
   "tipe": "pasteleria",
   "name": "Muffin de zanahoria",
@@ -81,7 +81,7 @@
   "price": 20
  },
  {
-  "cantidad":"combo",
+  "lot": "combo",
   "id": 10,
   "tipe": "evento",
   "name": "Lunch",

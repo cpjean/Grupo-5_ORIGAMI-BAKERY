@@ -1,44 +1,55 @@
 const fs = require ('fs');
 const path = require ('path');
+const Producto = require ('../models/Producto')
 
-let productos = fs.readFileSync(path.resolve('src/data/productos.json'),{encoding: 'utf-8'});
-productos= JSON.parse(productos);
+const productos = Producto.findAll()
 
 let controladorProductos = {
-
+    // renderizo la pagina de "productos"
     productos: function (req, res){
         res.render ('../views/products/productos.ejs',{productos})
     },
+    // renderizo la pagina de "creacion"
     creacion: function (req, res){
         res.render ('../views/products/creacion.ejs')
-    },  
+    },
+    // uso los datos obtenidos para crear un producto
+    create: function (req, res){
+        let newProducto = {
+            ...req.body,
+            img: req.file.filename
+        }
+        Producto.create (newProducto)
+        res.redirect ('/')
+    }, 
+    // renderizo la pagina de detalle de un producto segun el id
     detalle: function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = productos.find(producto=> producto.id == idEdit);
+        let producto = Producto.findByField (idEdit);
         res.render ('../views/products/detalle.ejs',{ producto })
     }, 
+    // renderizo la pagina de edicion de un producto segun el id
     edicion: function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = productos.find(producto=> producto.id == idEdit)
+        let producto = Producto.findByField (idEdit);
         res.render ('../views/products/edicion.ejs',{producto})
     },
+    // edito un producto
     update:  function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = productos.find(producto=> producto.id == idEdit)
-        producto.name =  req.body.name;
-        producto.description =  req.body.description;
-        producto.price =  req.body.price;
-        producto.categoria =  req.body.categoria;
-        producto.tipe =  req.body.tipe;
-        producto.cantidad =  req.body.cantidad;
-        fs.writeFileSync(path.resolve('src/data/productos.json'), JSON.stringify(productos, null, ' '));
-        res.redirect('/:id/detalle');
+        let editProducto = {
+            ...req.body,
+            id: idEdit,
+            img: req.file.filename
+        }
+        Producto.update(editProducto)
+        res.redirect('/productos');
 
     },
+    // borro un producto
     destroy: function (req, res){
             let idEdit = Number(req.params.id);
-            productos = productos.filter(producto => producto.id !== idEdit);
-            fs.writeFileSync(path.resolve('src/data/productos.json'), JSON.stringify(productos, null, ' '));
+            Producto.delete(idEdit)
             res.redirect('/productos');
     }
 };
