@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="/css/edicion.css" rel="stylesheet">
+    <title>Editar Producto</title>
+</head>
+<body>
+
+    <%- include ('../partials/header') %> 
+
+    <div class="form ">
+            
+        <div class="form-content">
+
+            <header class="reg">Editar Producto</header>
+            
+
+            <form method="POST" action="/productos/<%= producto.id %>/edicion?_method=PUT" enctype="multipart/form-data">
+
+                <div class="campo input-campo">
+                    <label for="name">Producto:</label>
+                    <input type="text" placeholder="Search.." class="input" value="<%= producto.name %>" name="name">
+                </div>
+
+                <div class="campo input-campo">
+                    <label for="description">Descripción:  </label>
+                    <input type="text" placeholder="descripcion del producto buscado" class="input" value="<%= producto.description %>" name="description">
+                </div>
+
+                <div class="campo input-campo">
+                    <label for="img">Imagen Producto:  </label>
+                    <input type="file" accept="image/png, image/gif, image/jpeg" name="img">
+                </div>
+
+                <div class="campo input-campo">
+                    <label for="category">Categorias:  </label>
+                    <select name="category" id="categorias">
+                        <option value=""><%= producto.tipe %></option>
+                        <option value="">Panaderia</option>
+                        <option value="">Pasteleria</option>
+                    </select>
+                </div>
+                
+                <div class="campo input-campo">
+                    <label for="lot">Cantidad:  </label>
+                    <select name="lot" id="cantidad">
+                        <option value="<%= producto.cantidad %>"><%= producto.cantidad %></option>
+                        <option value="c/u">c/u</option>
+                        <option value="el kg">el kg</option>
+                        <option value="combo">Combo</option>
+                    </select>
+                </div>
+
+                <div class="campo input-campo">
+                    <label for="price">Precio:  </label>
+                    <input type="number" placeholder="precio de producto buscado" id="precio" name="price" class="input" value="<%= Number(producto.price) %>">
+                </div>
+
+                <div class="campo input-campo">
+                    <button type="submit">Modificar</button>
+                </div> 
+
+            </form>
+            <div class="eliminar">                    
+                <form method="POST" action="/productos/<%= producto.id %>/edicion?_method=DELETE">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </div> 
+
+
+        </div>
+        
+    </div>
+
+</body>
+</html>

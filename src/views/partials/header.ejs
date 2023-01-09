@@ -1,0 +1,42 @@
+<header id="header">
+
+    <div class="cont-logo">
+       <a href="/"><img src="\Imagenes\Logo.png" alt="Logo del negocio" class="logo"></a> 
+    </div>
+    <div class="cont-nav">
+        <nav class="navegacion">
+            <div class="nav-desplegable">
+                <label for="check-desplegable" class="fa-solid fa-bars desplegable"></label>
+            </div>
+            <input type="checkbox" id="check-desplegable">
+            <ul class="pestañas">
+                <li class="minimisar"><a href="/">Inicio</a></li>
+                <li class="productos"><a href="#">Productos</a>
+                    <ul class="sub-menu">
+                        <li><a href="/productos">Todo</a></li>
+                        <li><a href="/panaderia">Panaderia</a></li>
+                        <li><a href="/confiteria">Confiteria</a></li>
+                        <li><a href="/eventos">Eventos</a></li>
+                    </ul>
+                </li>
+                <% if (locals.admin) { %> 
+                <li><a href="/productos/create">Crear</a></li> 
+                <% } %>
+                <li class="minimisar"><a href="/nosotros">Nosotros</a></li>
+                <% if (locals.logged) { %> 
+                <li class="minimisar"><a href="/carrito">Carrito</a></li>
+                <li class="productos"><a href="#"><%= userLog.name %></a>
+                    <ul class="sub-menu">
+                        <li><a href="/user/perfil">Perfil</a></li>
+                        <li><a href="/user/logout">Salir</a></li>
+                    </ul>
+                </li>
+                <% } else { %> 
+                <li class="minimisar"><a href="/user/login">Ingresá</a></li>
+                <% } %> 
+            </ul>
+        
+        </nav>
+    </div>
+    
+</header>

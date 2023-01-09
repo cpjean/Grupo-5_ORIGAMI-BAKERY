@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="/css/Login.css" rel="stylesheet">
+    <title>Registrate</title>
+</head>
+<body>
+
+    <%- include ('../partials/header') %> 
+
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header class="reg">Registrate</header>
+                <form action="/user/registro" method="POST" enctype="multipart/form-data">
+
+                    <div class="campo input-campo">
+                        <input type="email" placeholder="Email" class="input" name="email" value="<%= locals.oldData ? oldData.email  : null %> ">
+                        <% if (locals.errors && errors.email) {%>
+                            <div class="text-danger">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %> 
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="text" placeholder="Nombre" class="input" name="name" value="<%= locals.oldData ? oldData.name  : null %>">
+                        <% if (locals.errors && errors.name) {%>
+                            <div class="text-danger">
+                                <%= errors.name.msg %> 
+                            </div>
+                        <% } %> 
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="file" placeholder="Avatar" class="input" name="avatar" value="<%= locals.oldData ? oldData.avatar : null %>">
+                        <% if (locals.errors && errors.avatar) {%>
+                            <div class="text-danger">
+                                <%= errors.avatar.msg %> 
+                            </div>
+                        <% } %> 
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Contraseña" class="input" name="password">
+                        <% if (locals.errors && errors.password) {%>
+                            <div class="text-danger">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %> 
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+
+                    <div class="campo input-campo">
+                        <input type="password" placeholder="Confirmar contraseña" class="input" name="confirm-password">
+                        <% if (locals.errors && errors.password) {%>
+                            <div class="text-danger">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %> 
+                        <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                    </div>
+
+                    <div class="novedades">
+                        <label for="novedades">
+                            <input type="checkbox" id="novedades" name="novedades">Te gustaria recibir novedades?
+                        </label>
+                    </div>
+
+                    <div class="campo input-campo">
+                        <button>Registrarse</button>
+                    </div>
+                                    
+                </form>
+                <div class="form-link">
+                   <span>Ya tenes una cuenta? <a href="/Login" class="signup-link">Inicia sesion</a></span>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+</body>
+</html>

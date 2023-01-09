@@ -1,0 +1,95 @@
+
+.container {
+    width: 100%;
+}
+
+.form{
+    max-width: 430px;
+    margin: 150px auto 5px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 6px ;
+    background: #fff;
+}
+
+.reg{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+
+.novedades{
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin-top: 30px;
+}
+
+.form .campo{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+    display: flex;
+}
+
+.campo input,
+.campo button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.campo input, select{
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+    margin: 0 15px;
+}
+
+.campo button{
+    color: #FFF;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.campo button:hover{
+    color: #FFF;
+    background-color: #016dcb
+}
+
+
+
+div label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.eliminar form {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.eliminar button {
+    width: 100%;
+    height: 45px;
+    color: #FFF;
+    background-color: #01c5d3;
+    transition: all 0.3s ;
+    cursor: pointer;
+}
+
+.eliminar button:hover{
+    color: #FFF;
+    background-color: #016dcb
+}

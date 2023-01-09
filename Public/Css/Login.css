@@ -1,0 +1,190 @@
+.container {
+    width: 100%;
+}
+/* a la caja del login le asigno: */
+.form{
+    max-width: 430px;
+    margin: 150px auto 5px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 6px ;
+    background: #fff;
+}
+
+/* al header (LogIn) le asigno: */
+.reg{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+
+.novedades{
+    justify-content: center;
+    align-items: center;
+}
+
+/* al contenido del formulario le doy una separacion de 30px entre si */
+form{
+    margin-top: 30px;
+}
+
+/* a los inputs les doy estas caracteristicas */
+.form .campo{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+/* a los inputs y al boton les asigno: */
+.campo input,
+.campo button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.campo input{
+    /* outline: none; */
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+}
+
+/* a los a href */
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span,
+.form-link a{
+    font-size:14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+.media-options a{
+    display: flex;
+    background-color: #4267b2;
+}
+
+a.facebook{
+    color: #fff;
+    background-color: #4267b2;
+    justify-content: center;
+    align-items: center;
+}
+
+a.facebook .facebook-icon{
+    height: 23px;
+    width: 23px;
+    color: #0171d3;
+    font-size: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.facebook-icon{
+    position: absolute; 
+     top: 50%; 
+   left: 15px;
+    transform: translateY(-50%);
+}
+
+a.google{
+    border: 1px solid #cacaca;
+    color: #000000;
+    background-color: #e5e5e5;
+    justify-content: center;
+    align-items: center;
+}
+
+a.google .google-icon{
+    height: 25px;
+    width: 25px;
+    color: #d62828;
+    font-size: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.google-icon{
+    position: absolute; 
+     top: 50%; 
+   left: 15px;
+    transform: translateY(-50%);
+}
+/*
+Tengo que arreglar el tema del ojito en el password xd
+.fa-eye-slash{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+   
+    font-size: 18px;
+    color:gray;
+} */
+
+.campo button{
+    color: #FFF;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.campo button:hover{
+    color: #FFF;
+    background-color: #016dcb
+}
+
+.form a{
+    text-decoration: none;
+}
+
+/* cuando pases el mouse por arriba de algun a, se va a ver facherardo */
+.form a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #232836;
+    padding: 0 15px;
+}
+
+@media (min-width: 1200px) {
+    /*-------------------- HEADER --------------------------*/
+    /*-----------------LOGO-------------------*/
+    /*--------------BARRA DE BUSQUEDA-------------*/
+    /*---------------TEXTO---------------*/
+    /*--------------NAVEGADOR---------------*/
+    /*-----------------MENU BURGER-----------------*/
+    /*--------------------------MAIN---------------------------*/
+    /*---------------------BANNER---------------------------*/
+    /*------------------IMAGENES----------------------*/
+    /*------------DESCRIPCION----------------*/
+    /*------------------TITULARES---------------------*/
+    /*------------------FOOTER---------------*/
+    }

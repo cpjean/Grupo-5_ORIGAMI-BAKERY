@@ -1,0 +1,259 @@
+/*--------------General y Body---------------*/
+/*Fondo, margenes y fuente*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-image:url('/Imagenes/fondo.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    text-decoration: none;   
+}
+/*-------------------- HEADER --------------------------*/
+/*Posicionamiento desplazable*/
+#header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 1;
+}
+
+/*-----------------LOGO-------------------*/
+.cont-logo {
+    background-color: #e1e1e1a0;
+    border-radius: 50%;
+    position: relative;
+    width: 90px;
+}
+.cont-logo img {
+    filter: drop-shadow( 5px 3px 15px #e3bd00a9);
+    width: 100%;
+}
+
+/*--------------NAVEGADOR---------------*/
+/*Menu y submenu dezplegable mediante hover's */
+.cont-nav {
+    width: 50%;
+}
+.navegacion {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.desplegable {
+    text-align: center;
+    color:#ffffff;
+    font-size: 30px;
+    background-color: #1f1f1dc6;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: solid 1px #e1e1e1;
+}
+#check-desplegable {
+    position: absolute;
+    top:  5px;
+    display: none;
+}
+.pestañas {
+    visibility: hidden;   
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    transition: all 450ms;
+}
+
+.pestañas li {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+.pestañas a {
+    text-align: center;
+    font-size: 18px;
+    background-color: #1f1f1db4;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color:#ffffff;
+    transition: all 400ms;
+    border: solid 1px #e1e1e1;
+}
+.pestañas a:hover {
+    background-color: #1f1f1daa;
+    color: #e3bd00c7;   
+}
+.desplegable:hover {
+    background-color: #1f1f1df1;
+    color: #e3bd00c7; 
+}
+#check-desplegable:hover ~ .pestañas {
+    visibility: visible;
+}
+.pestañas:hover {
+    visibility: visible;
+}
+.sub-menu {
+    display: none;
+}
+.productos:hover .sub-menu {
+    display: block;
+}
+.sub-menu:hover {
+    display: block;
+}
+.productos:hover .minimisar {
+    display: none;
+}
+
+/*------------------FOOTER---------------*/
+/*Footer minimizado para movil*/
+#footer a {
+    text-decoration: none;
+    color: #ffffffae;
+}
+.footer {
+    color: #ffffffae;
+    position: fixed;
+    bottom: 0;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 0 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.footer .vista-default {
+    border: solid 1px #e1e1e1;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 2rem;
+    background-color: #1f1f1d;
+    display: flex;
+    justify-content: center;
+
+}
+.iconos-redes-vista {
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.vista-default .fa-bars {
+    display: none;
+}
+.cont-pie {
+    display: none;
+    width: 30%;
+}
+.iconos-redes {
+    width: 30px;
+    font-size: 25px;
+    text-align: center;
+    padding: 2px 2px;
+    border: solid 1px #e1e1e1;
+    text-align: center;
+    box-sizing: content-box;
+    border-radius: 10px;
+}
+
+@media (min-width: 1200px) {
+/*--------------NAVEGADOR---------------*/
+/*Oculto menu desplegable y posiciono las opciones de navegacion horizontalmente*/
+.nav-desplegable {
+    display: none;
+}
+.cont-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+
+}
+.navegacion {
+    width: 100%;
+    margin-right: 5%;
+}
+.pestañas {
+    visibility: visible;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.pestañas a {
+    background-color: #1f1f1d3d;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color:#ffffff;
+    transition: all 400ms;
+}
+.pestañas:hover {
+    display: flex;
+}
+
+/*------------------FOOTER---------------*/
+/*Cambio vision minimizada por un menu desplegable y que se mantenga mediante el uso de hover*/
+.iconos-redes-vista {
+    display: none;
+}
+#footer:hover {
+    padding: 10px 0 5px; 
+    background-color: #1f1f1df5; 
+}
+.footer:hover .vista-default{
+    display: none;
+}
+.footer:hover .cont-pie {
+    display:block;
+}
+.cont-footer {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.cont-pie-dos {
+    border-left: solid 1px #e1e1e1; 
+    border-right: solid 1px #e1e1e1;
+    width: 33%;
+}
+.cont-footer h2 {
+    text-align: center;
+}
+.cont-footer p {
+    margin: 0 3%;
+    text-align: justify;
+}
+.titulos-pie {
+    margin: 5px;
+}
+.redes-i {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.vista-default .fa-bars {
+    font-size: 1.5rem;
+    margin: 3px 0 1% 0;
+    display: block;
+}
+}

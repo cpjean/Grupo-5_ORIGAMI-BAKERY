@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <link href="/css/creacion.css" rel="stylesheet">
+    <title>Añadir Producto</title>
+</head>
+<body>
+
+    <%- include ('../partials/header') %> 
+
+    <section class="container forms">
+
+        <div class="form login">
+            
+            <div class="form-content">
+
+                <header class="reg">Añadir Producto</header>
+
+                <form action="/productos/create" method="POST" enctype="multipart/form-data">
+
+                    <div class="campo input-campo">
+                        <label for="name">Nombre de Producto:  </label>
+                        <input type="text" placeholder="..." class="input" name="name">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="description">Descripción de Producto:  </label>
+                        <input type="text" placeholder="..." class="input" name="description">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="img">Imagen Producto:  </label>
+                        <input type="file" placeholder="..." accept="image/png, image/gif, image/jpeg" name="img">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="tipe">Categorias:  </label>
+                        <select name="tipe" id="categorias">
+                            <option value="pasteleria">Pastelería</option>
+                            <option value="panaderia">Panadería</option>
+                            <option value="evento">Eventos</option>
+                        </select>
+                    </div>
+
+                    <div class="campo input-campo">
+                        <label for="lot">Cantidad:  </label>
+                        <select name="lot" id="cantidad">
+                            <option value="c/u">c/u</option>
+                            <option value="el kg">el kg</option>
+                            <option value="combo">Combo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="campo input-campo">
+                        <label for="price">Precio:  </label>
+                        <input type="number" id="precio" name="price">
+                    </div>
+
+                    <div class="campo input-campo">
+                        <button type="submit">Añadir</button>
+                    </div>
+                
+                </form>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+</body>
+</html>

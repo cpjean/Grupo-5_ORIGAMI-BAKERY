@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <link href="/css/detalle.css" rel="stylesheet">
+    <title>Producto</title>
+</head>
+
+<body>
+
+    <%- include ('../partials/header') %> 
+
+    <main class="container">
+        <!-- Columna Izquierda / Cañon Relleno de Dulce de Leche -->
+        
+        <div class="left-column">
+            <img src="/Imagenes/products/<%= producto.img %>" alt="<%= producto.img %>">
+        </div>
+
+        <!-- Columna Derecha / Descripcion, Cantidad y Precio -->
+
+        <div class="right-column">
+        
+          <!-- Descripcion de Producto -->
+          <div class="product-description">
+            <span><%= producto.tipe %></span>
+            <h1><%= producto.name %></h1>
+            <p><%= producto.description %></p>
+          </div>
+       
+          <!-- Cantidad -->
+          <div class="cantidad-configuration">
+            <span>Cantidad</span>
+            <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
+          </div>
+
+          <!-- Precio -->
+          <div class="product-price">Precio:
+            <span>$ <%= producto.price %> <%= producto.cantidad %></span>
+          </div>
+
+          <!-- Añadir al Carrito-->
+          <div>
+            <a href="/carrito" class="cart-btn">Añadir al Carrito</a>
+          </div>
+          <div>
+            <a href="/productos/<%= producto.id %>/edicion" class="cart-btn editar">Editar</a>
+          </div>
+        </div>
+    
+    </main> 
+
+    <%- include ('../partials/footer') %> 
+
+</body>
+
+</html>

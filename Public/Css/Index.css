@@ -1,0 +1,101 @@
+
+/*--------------------------MAIN---------------------------*/
+/*Definicion de tamaño de las imagenes y sus contenedores, animacion de desplasamiento para crear un carrusel (puede cambiar mas adelante) */
+.slider {
+    width: 100vw;
+    height: 100vh;
+    border: solid 2px #e1e1e1;
+    overflow: hidden;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    box-shadow: 0px 0px 13px 10px #1f1f1d;
+}
+.cont-img-carrusel {
+    display : flex;
+    animation: cambio 10s infinite normal linear;
+    width: 300%;
+}
+.img-movil {
+    width: 100vw;
+    height: 100vh;
+    list-style: none;
+    display: flex;
+}
+.img-movil img {
+    width: 100vw;
+    height: 100vh;
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    31.3% {margin-left: 0;}
+    33.3% {margin-left: -100.7%;}
+    64.6% {margin-left: -100.7%;}
+    66.6% {margin-left: -201.5%;}
+    100% {margin-left: -201.5%;}
+}
+
+/*------------DESCRIPCION----------------*/
+/*estilos de los mensajes en cada imagen del carrusel*/
+.enunciado {
+    width: 50%;
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    margin: 0 25% 10%;
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1f1f1d96;
+    border-radius: 25px;
+    border: solid 1px #e1e1e1;
+}
+.enunciado a {
+    text-decoration: none;
+    width: 100%;
+}
+.titulo {
+    color: #e1e1e1;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: solid 1.5px #e1e1e1;
+}
+.descripcion {
+    color: #e1e1e1;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+@media (min-width: 1200px) {
+/*--------------------------MAIN---------------------------*/
+/*arreglo de tamaños para evitar desfases en el cambio de dispositivos*/
+.slider {
+    width: 100%;
+    border: solid 2px #e1e1e1;
+    overflow: hidden;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    box-shadow: 0px 0px 13px 10px #1f1f1d;
+}
+.img-movil {
+    max-width: 100%;
+    max-height: 100%;
+    list-style: none;
+    display: flex;
+}
+.img-movil img {
+    width: 100vw;
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    31.3% {margin-left: 0;}
+    33.3% {margin-left: -100.7%;}
+    64.6% {margin-left: -100.7%;}
+    66.6% {margin-left: -200.5%;}
+    100% {margin-left: -200.5%;}
+}
+}

@@ -1,0 +1,58 @@
+[
+ {
+  "id": 1,
+  "avatar": "",
+  "name": "Santiago",
+  "category": "user",
+  "email": "santiago_mori-93@hotmail.comm",
+  "password": "hola1234"
+ },
+ {
+  "id": 2,
+  "avatar": "",
+  "name": "Leisha",
+  "category": "admin",
+  "email": "zaldwich4@vkontakte.ru",
+  "password": "9ZUcIWAB"
+ },
+ {
+  "id": 3,
+  "avatar": "",
+  "name": "Lucho",
+  "category": "user",
+  "email": "lorpen7@senate.gov",
+  "password": "xQYHEZYDak4"
+ },
+ {
+  "id": 4,
+  "avatar": "",
+  "name": "Lutero",
+  "category": "user",
+  "email": "jbohlmann5@google.co.jp",
+  "password": "uQOgDqp"
+ },
+ {
+  "id": 5,
+  "avatar": "",
+  "name": "Gianna",
+  "category": "user",
+  "email": "gbeardsell1@disqus.com",
+  "password": "MzG9d0d"
+ },
+ {
+  "id": 6,
+  "avatar": "1673206189416_img.jpg",
+  "name": "Santiago Agustin",
+  "category": "admin",
+  "email": "santiago_mori-93@hotmail.com",
+  "password": "$2a$10$2sIx.gla5LcSruRd13LsZuCeOnE7wDsVmJw9QaiHsKOqEv.D/tZzG"
+ },
+ {
+  "id": 7,
+  "avatar": "1673292263476_img.png",
+  "name": "Juan Ignacio",
+  "category": "user",
+  "email": "juanicastrooo@gmail.com",
+  "password": "$2a$10$OaO5hS9uZogoK0xnS0g/leHkimLTR/WJtJ17kiLABKFxKdHCxiJ/6"
+ }
+]
