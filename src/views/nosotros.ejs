@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include ('./partials/head') %> 
-    <link rel="stylesheet" href="/css/nosotros.css">
+  <head>
+    <%- include ('./partials/head') %>
+    <link rel="stylesheet" href="/css/nosotros.css" />
     <title>Index</title>
-</head>
+  </head>
 
-<body id="body">
+  <body id="body">
+    <%- include ('./partials/header') %>
 
- <%- include ('./partials/header') %> 
-
-    <main id="main">
-        <section class="presentacion">
-            <div class="generacion">
-                <h3>Un trabajo de generaciones</h3>
-                <img src="Imagenes/nosotros1.jpg" alt="familia antes">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat accusamus doloribus pariatur dolorem reprehenderit nam, quam sint eligendi perferendis labore quaerat magnam nihil, quae soluta facilis corrupti rem natus illum?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga unde illo alias corporis dolor deserunt enim officia, vero dolore hic nulla eligendi nesciunt quidem neque libero consectetur distinctio, amet aspernatur!</p>
-                <img src="Imagenes/nosotros2.jpg" alt="familia ahora">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum incidunt quas voluptatum quia atque optio temporibus alias voluptates necessitatibus odio dolorum modi esse, recusandae enim rem aspernatur explicabo officiis?</p>
+    <div class="section">
+      <div class="container">
+        <div class="title">
+          <h1>Sobre nosotros</h1>
+        </div>
+        <div class="content">
+          <div class="article">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              iure tempora, perspiciatis atque veniam ut dolorum? Rerum fugiat
+              deserunt porro, incidunt adipisci obcaecati iste
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              ducimus illo voluptate facere debitis vel porro quibusdam alias
+              similique fugiat. Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Temporibus culpa praesentium nulla hic illo
+              dolorem eos sequi suscipit fugiat ratione, eius deserunt, optio
+              laborum officiis incidunt ut ex? Suscipit, voluptatum!
+            </p>
+            <div class="button">
+              <a href="">Leer Mas</a>
             </div>
-            <div class="inicios">
-                <h3>Nuestro inicio</h3>
-                <img src="Imagenes/inicios.jpg" alt="inicios">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor quasi ad dolorem, expedita natus veritatis sit voluptatum asperiores consequatur perspiciatis nisi ullam temporibus quia dolore architecto itaque harum consectetur!</p>
-            </div>
-        </section>
-        <section class="producto">
-            <div>
-                <h3>La calidad</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aspernatur, eum animi perspiciatis quod ipsum quae laudantium mollitia corporis, dolorem dignissimos magnam iure quo vel illum laborum vero pariatur dolorum.</p>
-            </div>
-            <div class="proveedor">
-                <h3>Nuestros proveedores</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus odio adipisci distinctio quae repellendus, harum sint quaerat possimus neque veniam.</p>
-                <a href="http://www.molinocampodonico.com.ar/SitioWeb/index.html"><img src="Imagenes/proveedor.jpg" alt="proveedor"></a>
-            </div>
-        </section>
-    </main>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="Imagenes/nosotros1.jpg" alt="" />
+        </div>
+        <div class="social">
+          <a href=""><i class="fa-brands fa-facebook-f facebook-icon"></i></a>
+          <a href=""><i class="fa-brands fa-google google-icon"></i></a>
+          <a href=""><i class="fa-brands fa-facebook-f facebook-icon"></i></a>
+        </div>
+      </div>
+    </div>
 
-<%- include('./partials/footer') %> 
-
-</body>
+    <%- include('./partials/footer') %>
+  </body>
 </html>
