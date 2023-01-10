@@ -7,3 +7,4 @@ function authMid (req, res, next) {
 }
 
 module.exports = authMid
+module.exports = authMid

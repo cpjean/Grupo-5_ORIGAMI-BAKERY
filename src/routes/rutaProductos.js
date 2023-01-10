@@ -35,3 +35,4 @@ router.put('/:id/edicion', multerMid.single('img'), rutaProductos.update);
 router.delete('/:id/edicion', rutaProductos.destroy);
 
 module.exports = router;
+module.exports = router;

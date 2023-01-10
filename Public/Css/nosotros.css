@@ -1,17 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: whitesmoke;
+}
 
+body{
+    margin-top: 2%;
+ 
+}
 
 .section{
-    border-radius: 5px;
-    width: 90%;
-    margin: 115px auto 0;
-    background-color: rgb(206, 204, 204);
+    width: 100%;
 }
 
 .section .container{
     width: 80%;
     display: block;
     margin: 0px auto;
-    padding: 0px 0px;
+    padding: 50px 0px;
 }
 
 .container .title{
@@ -159,3 +168,8 @@
         line-height: 35px;
     }
 }
+
+
+
+
+
