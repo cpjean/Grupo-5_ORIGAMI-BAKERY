@@ -26,7 +26,7 @@ let controladorProductos = {
             img: req.file.filename
         }
         Producto.create (newProducto)
-        res.redirect ('/')
+        res.redirect ('/productos')
     }, 
     // renderizo la pagina de detalle de un producto segun el id
     detalle: function (req, res){

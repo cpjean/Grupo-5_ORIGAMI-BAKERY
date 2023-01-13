@@ -1,0 +1,10 @@
+// funcion que se fija en la ruta de productos espesificos
+function productEspMid (req, res, next) {
+    let parametro = req.params.producto
+    if (parametro != "panaderia" && parametro != "pasteleria" && parametro != "evento") {
+        return res.redirect ('/productos')
+    }
+    next();
+}
+
+module.exports = productEspMid

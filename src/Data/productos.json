@@ -54,14 +54,14 @@
   "price": 450
  },
  {
-    "lot": "c/u",
-    "id": 7,
-    "tipe": "panaderia",
-    "name": "Baguette",
-    "description": "Pan clasico frances de crocante corteza ideal para sandwich",
-    "img": "baguette-1.jpg",
-    "price": 90
-},
+  "lot": "c/u",
+  "id": 7,
+  "tipe": "panaderia",
+  "name": "Baguette",
+  "description": "Pan clasico frances de crocante corteza ideal para sandwich",
+  "img": "baguette-1.jpg",
+  "price": 90
+ },
  {
   "lot": "c/u",
   "id": 8,
@@ -81,12 +81,12 @@
   "price": 20
  },
  {
-  "lot": "combo",
+  "lot": "",
   "id": 10,
-  "tipe": "evento",
   "name": "Lunch",
+  "tipe": "evento",
   "description": "6 empanaditas de pollo, 6 empanaditas de carne, 6 triángulos de hojaldre y pollo, 8 vienitas con queso (salchichas envueltas en queso y masa), 6 bastones de muzzarella, 4 pizzetas de tomate y muzarella, 12 canastitas soufflé surtidas (mini tartas saladas)",
   "img": "lunch.jpg",
-  "price": 3200
+  "price": "3200"
  }
 ]

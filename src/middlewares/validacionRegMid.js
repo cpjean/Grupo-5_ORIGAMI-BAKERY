@@ -24,14 +24,3 @@ module.exports = [
         return true;
     })
 ]
-        if(!file){
-            throw new Error('Suba una imagen');
-        } else{
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtension.includes(fileExtension)){
-                throw new Error(`El archivo debe ser ${acceptedExtension.join(', ')}`)
-            }
-        }
-        return true;
-    })
-]
