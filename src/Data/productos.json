@@ -81,7 +81,7 @@
   "price": 20
  },
  {
-  "lot": "",
+  "lot": "combo",
   "id": 10,
   "name": "Lunch",
   "tipe": "evento",
