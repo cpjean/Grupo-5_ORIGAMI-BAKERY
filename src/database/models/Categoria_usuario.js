@@ -1,6 +1,6 @@
 module.exports = function (sequelize, dataType) {
 
-    let alias = 'CategoryUsuario';
+    let alias = 'CategoryUser';
 
     let cols = {
 
@@ -15,14 +15,14 @@ module.exports = function (sequelize, dataType) {
     };
 
     let config = {
-        tableName: '',
+        tableName: 'category_user',
         timestamps: false
     };
 
     let CategoryUsuario = sequelize.define(alias, cols, config);
 
     CategoryUsuario.associate = function (models) {
-        CategoryUsuario.hasMany (models.Usuario, {
+        CategoryUsuario.belongsTo (models.User, {
             as: 'users',
             foreigkey: 'id_category'
         });

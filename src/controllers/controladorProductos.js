@@ -1,20 +1,37 @@
 const fs = require ('fs');
 const path = require ('path');
-const Producto = require ('../models/Producto')
+const { Sequelize } = require('../database/models');
+//const Producto = require ('../models/Producto')
+//const productos = Producto.findAll()
 
-const productos = Producto.findAll()
+const db = require ('../database/models');
+const Op = Sequelize.Op;
 
 let controladorProductos = {
     // renderizo la pagina de "productos"
     productos: function (req, res){
-        res.render ('../views/products/productos.ejs',{productos})
+        db.Product.findAll()
+        .then (function(productos){
+            return res.render ('../views/products/productos.ejs',{productos})
+        })        
     },
     // renderizo la pagina de "productos" de algun tipo
-    productosEspecificos: function (req, res){
-        let tipeEdit = req.params.producto
-        let productos = Producto.filterByField ('tipe', tipeEdit);
-        res.render ('../views/products/productos.ejs',{productos})
-    },    
+      productosEspecificos: function (req, res){
+        let typeEdit = req.params.producto;
+        db.CategoryProduct.findOne({
+            where: {
+                name: typeEdit
+            }
+        }).then((type)=>{
+            db.Product.findAll({
+                where:{
+                    id_type: `${type.id}`
+                }
+            }).then (function(productos){
+                return res.render ('../views/products/productos.ejs',{productos})
+            })
+        })          
+    },/*  
     // renderizo la pagina de "creacion"
     creacion: function (req, res){
         res.render ('../views/products/creacion.ejs')
@@ -57,7 +74,7 @@ let controladorProductos = {
             let idEdit = Number(req.params.id);
             Producto.delete(idEdit)
             res.redirect('/productos');
-    }
+    }*/
 };
 
 module.exports = controladorProductos

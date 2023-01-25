@@ -54,5 +54,21 @@
   "category": "user",
   "email": "santi@gmail.com",
   "password": "$2a$10$rRqkL5lmaabs1g9NF2HA/OoBbp8LVSKvjf4iEkCCZsylwdzDBYdnq"
+ },
+ {
+  "id": 8,
+  "avatar": "1674252076261_img.jpg",
+  "name": "Julian Jara Aguirre",
+  "category": "user",
+  "email": "shaihueque@gmail.com",
+  "password": "$2a$10$qb/0KHaMPTDRWvyy02bW0OFJDVTuoIwc91Gecu2X.o12W.b7vJnFS"
+ },
+ {
+  "id": 9,
+  "avatar": "1674269316664_img.jpg",
+  "name": "Tomi",
+  "category": "user",
+  "email": "tomasegaimaro@gmail.com",
+  "password": "$2a$10$nh7IYxDrk7r2JZT6/bKNKOcFP5QfO7l/gvdMEsBBQH45yGwVBukEa"
  }
 ]

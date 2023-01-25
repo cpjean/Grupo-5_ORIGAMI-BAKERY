@@ -2,7 +2,7 @@ const { validationResult } = require('express-validator');
 const fs = require ('fs');
 const path = require ('path');
 const { receiveMessageOnPort } = require('worker_threads');
-const User = require ('../models/User')
+const User = require ('../modelos/User')
 const bcryptjs = require('bcryptjs')
 
 let controladorUsers = {
