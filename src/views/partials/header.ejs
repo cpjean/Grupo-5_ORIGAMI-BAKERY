@@ -19,7 +19,7 @@
                         <li><a href="/productos/evento">Eventos</a></li>
                     </ul>
                 </li>
-                <% if (locals.admin) { %> 
+                <% if ((locals.user && locals.user.id_category == 1)) { %> 
                 <li><a href="/productos/add/create">Crear</a></li> 
                 <% } %>
                 <li class="minimisar"><a href="/nosotros">Nosotros</a></li>

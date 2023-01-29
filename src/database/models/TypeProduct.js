@@ -16,15 +16,16 @@ module.exports = function (sequelize, dataType) {
 
     let config = {
         tableName: 'type_product',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
 
-    let Type = sequelize.define(alias, cols, config);
+    const Type = sequelize.define(alias, cols, config);
 
     Type.associate = function (models) {
         Type.hasMany(models.Product, {
-            as: 'Product',
-            foreignkey: 'id_type'
+            as: 'Products',
+            foreignKey: 'id_type'
         });
 
     };

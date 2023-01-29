@@ -9,24 +9,25 @@ module.exports = function (sequelize, dataType) {
             primaryKey: true,
             autoIncrement: true
         },
-        category: {
+        name: {
             type: dataType.STRING,
         }
     };
 
     let config = {
         tableName: 'category_user',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
 
-    let CategoryUsuario = sequelize.define(alias, cols, config);
+    let CategoryUser = sequelize.define(alias, cols, config);
 
-    CategoryUsuario.associate = function (models) {
-        CategoryUsuario.belongsTo (models.User, {
+    CategoryUser.associate = function (models) {
+        CategoryUser.hasMany (models.User, {
             as: 'users',
-            foreigkey: 'id_category'
+            foreignKey: 'id_category'
         });
     };
 
-    return CategoryUsuario;
+    return CategoryUser;
 }

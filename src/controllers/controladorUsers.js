@@ -1,8 +1,9 @@
 const { validationResult } = require('express-validator');
-const fs = require ('fs');
 const path = require ('path');
-const { receiveMessageOnPort } = require('worker_threads');
-const User = require ('../modelos/User')
+const { Sequelize } = require('../database/models');
+
+const db = require ('../database/models');
+const Op = Sequelize.Op;
 const bcryptjs = require('bcryptjs')
 
 let controladorUsers = {
@@ -22,7 +23,10 @@ let controladorUsers = {
             });
         }
       // defino si ya hay un email igual previamente registrado
-      let emailReg = User.findByField ('email', req.body.email);
+      let emailReg = db.User.findOne ({
+        where:{
+            email: req.body.email}
+        });
       //si existe mando un error
       if (emailReg) {
         return res.render ('./users/registro.ejs', {
@@ -33,18 +37,19 @@ let controladorUsers = {
             },
             oldData: req.body
         });        
-      }
+      } else {
       // definimos la info del usuario a crear
-      let userToCreate = {
-        ...req.body,
+      db.User.create({
+        name: req.body.name,
+        email: req.body.email,
+        avatar: req.file.filename,
         password: bcryptjs.hashSync(req.body.password,10),
-        avatar: req.file.filename
-      } 
-      console.log(userToCreate)
-      // usamos el metodo del modelo User.js para crear
-        User.create(userToCreate)
+        id_category: 2
+      }). then (()=>{
+        res.redirect 
       // redirigimos al index
-        return res.redirect ('/');
+        return res.redirect ('/')});
+        }
     },
     // renderizado de la vista de login
     ingreso: function (req, res){
@@ -53,7 +58,10 @@ let controladorUsers = {
     // funcion de login
     processLogin: function (req, res){
         //defino el usuario en base al email
-        let userLogEmail = User.findByField ('email', req.body.email);
+        db.User.findOne ({
+            where: {
+                email: req.body.email}
+            }).then (userLogEmail => {
         if (userLogEmail){
         // si existe comparo su contraseña del formulario con la guardada
             let userLogPassword = bcryptjs.compareSync (req.body.password, userLogEmail.password);
@@ -80,6 +88,7 @@ let controladorUsers = {
                 }
             }
         })
+    })
     },
     // logout
     logout: (req, res) => {

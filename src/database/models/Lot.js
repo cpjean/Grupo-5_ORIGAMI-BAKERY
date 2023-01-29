@@ -9,23 +9,24 @@ module.exports = function (sequelize, dataType) {
             primaryKey: true,
             autoIncrement: true
         },
-        Lot: {
+        name: {
             type: dataType.STRING,
         }
     };
 
     let config = {
         tableName: 'lot_product',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
 
-    let Lot = sequelize.define(alias, cols, config);
+    const Lot = sequelize.define(alias, cols, config);
 
     
     Lot.associate = function (models) {
-        Lot.hasMany (models.Product, {
-            as: 'Product',
-            foreignkey: 'id_lot'
+        Lot.hasMany(models.Product, {
+            as: 'Products',
+            foreignKey: 'id_lot'
         });
     };
 

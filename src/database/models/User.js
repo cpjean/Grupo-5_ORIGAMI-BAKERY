@@ -20,30 +20,23 @@ module.exports = function (sequelize, dataType) {
         },
         password: {
             type: dataType.STRING,
-        },
-        createdAt: {
-            type: dataType.DATE
-        },
-        updatedAt: {
-            type: dataType.DATE
         }
     };
 
     let config = {
         tableName: 'users',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
 
-    let Usuario = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
 
-    Usuario.associate = function (models) {
-
-
-        Usuario.hasMany (models.CategoryUser, {
-            as: 'category',
-            foreigkey: 'id_category'
+    User.associate = function (models) {
+        User.belongsTo (models.CategoryUser, {
+            as: 'CategoryUser',
+            foreignKey: 'id_category'
         });
     };
 
-    return Usuario;
+    return User;
 }

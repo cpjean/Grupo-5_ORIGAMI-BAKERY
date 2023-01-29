@@ -19,18 +19,18 @@ router.get('/', rutaProductos.productos);
 router.get('/:producto', rutaProductMid, rutaProductos.productosEspecificos);
 
 /* detalle de un producto */
-//router.get('/:id/detalle', rutaProductos.detalle);
+router.get('/:id/detalle', rutaProductos.detalle);
 
 /* form de creacion y envio la info*/
-//router.get('/add/create', authMidProductos, rutaProductos.creacion);
-//router.post('/add/create', multerMid.single('img'), rutaProductos.create);
+router.get('/add/create', authMidProductos, rutaProductos.creacion);
+router.post('/add/create', multerMid.single('img'), rutaProductos.create);
 
 /* obtengo el form de edicion y lo cargo */
-//router.get('/:id/edicion', authMidProductos, rutaProductos.edicion);
-//router.put('/:id/edicion', multerMid.single('img'), rutaProductos.update);
+router.get('/:id/edicion', authMidProductos, rutaProductos.edicion);
+router.put('/:id/edicion', multerMid.single('img'), rutaProductos.update);
 
 /* Acción de borrado */
-//router.delete('/:id/edicion', rutaProductos.destroy);
+router.delete('/:id/edicion', rutaProductos.destroy);
 
 
 module.exports = router;

@@ -16,16 +16,16 @@
             <header class="reg">Editar Producto</header>
             
 
-            <form method="POST" action="/productos/<%= producto.id %>/edicion?_method=PUT" enctype="multipart/form-data">
+            <form method="POST" action="/productos/<%= productEdit.id %>/edicion?_method=PUT" enctype="multipart/form-data">
 
                 <div class="campo input-campo">
                     <label for="name">Producto:</label>
-                    <input type="text" placeholder="Search.." class="input" value="<%= producto.name %>" name="name">
+                    <input type="text" placeholder="Search.." class="input" value="<%= productEdit.name %>" name="name">
                 </div>
 
                 <div class="campo input-campo">
                     <label for="description">Descripción:  </label>
-                    <input type="text" placeholder="descripcion del producto buscado" class="input" value="<%= producto.description %>" name="description">
+                    <input type="text" placeholder="descripcion del producto buscado" class="input" value="<%= productEdit.description %>" name="description">
                 </div>
 
                 <div class="campo input-campo">
@@ -34,27 +34,26 @@
                 </div>
 
                 <div class="campo input-campo">
-                    <label for="category">Categorias:  </label>
-                    <select name="category" id="categorias">
-                        <option value=""><%= producto.tipe %></option>
-                        <option value="">Panaderia</option>
-                        <option value="">Pasteleria</option>
+                    <label for="type">Categorias:  </label>
+                    <select name="type" id="categorias">
+                        <% for (let i = 0; i < allTypes.length; i++) { %> 
+                            <option value="<%= allTypes[i].id %>"><%= allTypes[i].name %></option>
+                        <% } %> 
                     </select>
                 </div>
                 
                 <div class="campo input-campo">
                     <label for="lot">Cantidad:  </label>
                     <select name="lot" id="cantidad">
-                        <option value="<%= producto.cantidad %>"><%= producto.cantidad %></option>
-                        <option value="c/u">c/u</option>
-                        <option value="el kg">el kg</option>
-                        <option value="combo">Combo</option>
+                        <% for (let i = 0; i < allLots.length; i++) { %> 
+                            <option value="<%= allLots[i].id %>"><%= allLots[i].name %></option>
+                        <% } %> 
                     </select>
                 </div>
 
                 <div class="campo input-campo">
                     <label for="price">Precio:  </label>
-                    <input type="number" placeholder="precio de producto buscado" id="precio" name="price" class="input" value="<%= Number(producto.price) %>">
+                    <input type="number" placeholder="precio de producto buscado" id="precio" name="price" class="input" value="<%= Number(productEdit.price) %>">
                 </div>
 
                 <div class="campo input-campo">
@@ -63,7 +62,7 @@
 
             </form>
             <div class="eliminar">                    
-                <form method="POST" action="/productos/<%= producto.id %>/edicion?_method=DELETE">
+                <form method="POST" action="/productos/<%= productEdit.id %>/edicion?_method=DELETE">
                     <button type="submit">Eliminar</button>
                 </form>
             </div> 

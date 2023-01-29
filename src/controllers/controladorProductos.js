@@ -1,8 +1,5 @@
-const fs = require ('fs');
 const path = require ('path');
 const { Sequelize } = require('../database/models');
-//const Producto = require ('../models/Producto')
-//const productos = Producto.findAll()
 
 const db = require ('../database/models');
 const Op = Sequelize.Op;
@@ -18,7 +15,7 @@ let controladorProductos = {
     // renderizo la pagina de "productos" de algun tipo
       productosEspecificos: function (req, res){
         let typeEdit = req.params.producto;
-        db.CategoryProduct.findOne({
+        db.Type.findOne({
             where: {
                 name: typeEdit
             }
@@ -31,50 +28,83 @@ let controladorProductos = {
                 return res.render ('../views/products/productos.ejs',{productos})
             })
         })          
-    },/*  
-    // renderizo la pagina de "creacion"
+    },
+    // renderizo la pagina de detalle de un producto segun el id
+    detalle: function (req, res){
+        let idProduct = Number(req.params.id);
+        db.Product.findOne({
+            where: {
+                id: idProduct
+            }
+        }).then (function(producto){ 
+            return res.render ('../views/products/detalle.ejs',{producto})
+        })
+    },
+      
+    // renderizo la pagina de "creacion" mediante una promesa que me devuelve los tipos y las cantidades
     creacion: function (req, res){
-        res.render ('../views/products/creacion.ejs')
+       let types =  db.Type.findAll();
+       let lots = db.Lot.findAll();
+       Promise
+       .all([types, lots]) 
+       .then (([allTypes, allLots])=>{
+            return res.render ('../views/products/creacion.ejs',{allTypes , allLots})
+        })
     },
     // uso los datos obtenidos para crear un producto
     create: function (req, res){
-        let newProducto = {
-            ...req.body,
-            img: req.file.filename
-        }
-        Producto.create (newProducto)
-        res.redirect ('/productos')
+        db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            img: req.file.filename,
+            id_type: req.body.type,
+            id_lot: req.body.lot,
+        }). then (()=>{
+        res.redirect ('/productos')})
     }, 
-    // renderizo la pagina de detalle de un producto segun el id
-    detalle: function (req, res){
-        let idEdit = Number(req.params.id);
-        let producto = Producto.findByField ('id', idEdit);
-        res.render ('../views/products/detalle.ejs',{ producto })
-    }, 
+
     // renderizo la pagina de edicion de un producto segun el id
     edicion: function (req, res){
         let idEdit = Number(req.params.id);
-        let producto = Producto.findByField ('id', idEdit);
-        res.render ('../views/products/edicion.ejs',{producto})
-    },
+        let types =  db.Type.findAll();
+        let lots = db.Lot.findAll();
+        let productEdit = db.Product.findByPk (idEdit,{include:['lots', 'types']});
+        Promise
+        .all([types, lots, productEdit])
+        .then (([allTypes,allLots, productEdit]) =>{
+           return res.render ('../views/products/edicion.ejs',{allTypes,allLots, productEdit})
+        })    
+    }, 
+    
     // edito un producto
     update:  function (req, res){
         let idEdit = Number(req.params.id);
-        let editProducto = {
-            ...req.body,
-            id: idEdit,
-            img: req.file.filename
-        }
-        Producto.update(editProducto)
-        res.redirect('/productos');
-
+        db.Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            img: req.file.filename,
+            id_type: req.body.type,
+            id_lot: req.body.lot,
+        },
+        {
+            where: { id: idEdit}
+        }). then (()=>{
+        res.redirect ('/productos')})
     },
     // borro un producto
     destroy: function (req, res){
             let idEdit = Number(req.params.id);
-            Producto.delete(idEdit)
-            res.redirect('/productos');
-    }*/
+            db.Product.destroy({
+                where: {
+                    id: idEdit},
+                    force: true
+            })
+            .then (() => {
+                return res.redirect ('/productos')
+            })
+    }
 };
 
 module.exports = controladorProductos

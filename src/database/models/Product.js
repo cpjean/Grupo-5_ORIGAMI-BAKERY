@@ -20,24 +20,25 @@ module.exports = function (sequelize, dataType) {
         },
         price: {
             type: dataType.DECIMAL,
-        },
+        }
     };
 
     let config = {
         tableName: 'product',
-        timestamps: false
+        timestamps: false,
+        underscore: true
     };
 
-    let Product = sequelize.define(alias, cols, config);
+    const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function (models) {
-        Product.belongsTo (models.Type, {
-        as: 'type',
-        foreignkey: 'id_type'
+        Product.belongsTo(models.Type, {
+        as: 'types',
+        foreignKey: 'id_type'
     });
-        Product.belongsTo (models.Lot, {
-        as: 'lot',
-        foreignkey: 'id_lot'
+        Product.belongsTo(models.Lot, {
+        as: 'lots',
+        foreignKey: 'id_lot'
     });
 }
 

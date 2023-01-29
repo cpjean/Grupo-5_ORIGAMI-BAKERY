@@ -35,20 +35,20 @@
                     </div>
 
                     <div class="campo input-campo">
-                        <label for="tipe">Categorias:  </label>
-                        <select name="tipe" id="categorias">
-                            <option value="pasteleria">Pastelería</option>
-                            <option value="panaderia">Panadería</option>
-                            <option value="evento">Eventos</option>
+                        <label for="type">Categorias:  </label>
+                        <select name="type" id="categorias">
+                            <% for (let i = 0; i < allTypes.length; i++) { %> 
+                                <option value="<%= allTypes[i].id %>"><%= allTypes[i].name %></option>
+                            <% } %> 
                         </select>
                     </div>
 
                     <div class="campo input-campo">
                         <label for="lot">Cantidad:  </label>
                         <select name="lot" id="cantidad">
-                            <option value="c/u">c/u</option>
-                            <option value="el kg">el kg</option>
-                            <option value="combo">Combo</option>
+                            <% for (let i = 0; i < allLots.length; i++) { %> 
+                                <option value="<%= allLots[i].id %>"><%= allLots[i].name %></option>
+                            <% } %> 
                         </select>
                     </div>
                     
