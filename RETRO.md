@@ -11,3 +11,6 @@ En lineas generales creemos que hicimos un trabajo mas prolijo que la vez anteri
 
 <!------------------------ SPRINT 4 y 5 ------------------------->
 En ambos sprints nos vimos enormemente descordinados tanto para asignar tareas como para coordinar reuniones para resolver los sprints. Por otro lado tenemos problemas a la hora de resoluciones de forma individual.
+
+<!------------------------ SPRINT 6 ------------------------->
+En todos los aspectos seguimos igual que en sprints pasados, falta un rol de lider el cual pueda llevar a cabo una división de tareas a realizar y supervise que se hagan sin ser inquisitivo en el proceso.
