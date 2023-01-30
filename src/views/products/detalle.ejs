@@ -45,7 +45,7 @@
             <a href="/carrito" class="cart-btn">Añadir al Carrito</a>
           </div>
           <% } %> 
-          <% if ((locals.user && locals.user.id_category == 1)) { %>
+          <% if (locals.admin) { %>
           <div>
             <a href="/productos/<%= producto.id %>/edicion" class="cart-btn editar">Editar</a>
           </div>
