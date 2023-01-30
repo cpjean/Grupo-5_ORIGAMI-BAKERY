@@ -23,33 +23,36 @@ let controladorUsers = {
             });
         }
       // defino si ya hay un email igual previamente registrado
+
       let emailReg = db.User.findOne ({
         where:{
             email: req.body.email}
-        });
+        })
+            .then(emailReg => {
+                if (emailReg) {
+                    return res.render ('./users/registro.ejs', {
+                        errors: {
+                            email: {
+                                msg: 'Este email ya ha sido registrado'
+                            }
+                        },
+                        oldData: req.body
+                    });        
+                  } else {
+                  // definimos la info del usuario a crear
+                  db.User.create({
+                    name: req.body.name,
+                    email: req.body.email,
+                    avatar: req.file.filename,
+                    password: bcryptjs.hashSync(req.body.password,10),
+                    id_category: 2
+                  }). then (()=>{
+                    res.redirect 
+                  // redirigimos al index
+                    return res.redirect ('/')});
+                    }
+            })
       //si existe mando un error
-      if (emailReg) {
-        return res.render ('./users/registro.ejs', {
-            errors: {
-                email: {
-                    msg: 'Este email ya ha sido registrado'
-                }
-            },
-            oldData: req.body
-        });        
-      } else {
-      // definimos la info del usuario a crear
-      db.User.create({
-        name: req.body.name,
-        email: req.body.email,
-        avatar: req.file.filename,
-        password: bcryptjs.hashSync(req.body.password,10),
-        id_category: 2
-      }). then (()=>{
-        res.redirect 
-      // redirigimos al index
-        return res.redirect ('/')});
-        }
     },
     // renderizado de la vista de login
     ingreso: function (req, res){
