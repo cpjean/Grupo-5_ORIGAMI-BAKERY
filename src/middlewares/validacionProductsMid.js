@@ -1,15 +1,10 @@
 const {body} = require('express-validator');
 const path= require('path');
 
-
-// creo las validaciones para login y registro, que no quede el campo vacio o se envia un mensaje
 module.exports = [
-    body('email')
-       .notEmpty().withMessage('Ingrese su email').bail()
-       .isEmail().withMessage('Debe ingresar un email valido'),
-    body('name').notEmpty().isLength({ min: 2}).withMessage('Escriba su nombre'),
-    body('password').notEmpty().isLength({ min: 8}).withMessage('Escriba su contraseña'),
-    body('avatar').custom((value,{req}) =>{
+    body('name').notEmpty().isLength({ min: 5 }),
+    body('description').notEmpty().isLength({ min: 20}),
+    body('img').custom((value,{req}) =>{
         let file = req.file;
         let acceptedExtension = ['.jpg', '.png', '.jpeg', '.gif']
 
