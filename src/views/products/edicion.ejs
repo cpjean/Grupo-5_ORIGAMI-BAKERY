@@ -3,6 +3,7 @@
 <head>
     <%- include ('../partials/head') %> 
     <link href="/css/edicion.css" rel="stylesheet">
+    <link href="/css/Validaciones.css" rel="stylesheet">
     <title>Editar Producto</title>
 </head>
 <body>
@@ -17,6 +18,10 @@
             
 
             <form method="POST" action="/productos/<%= productEdit.id %>/edicion?_method=PUT" enctype="multipart/form-data">
+
+                <div>
+                    <ul id="errores"> </ul>
+                </div>
 
                 <div class="campo input-campo">
                     <label for="name">Producto:</label>
@@ -71,6 +76,8 @@
         </div>
         
     </div>
+
+    <script src="/js/creacion-edicion.js"></script>
 
 </body>
 </html>

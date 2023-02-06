@@ -3,6 +3,7 @@
 <head>
     <%- include ('../partials/head') %> 
     <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/Validaciones.css" rel="stylesheet">
     <title>Inicia Sesion</title>
 </head>
 <body>
@@ -15,18 +16,24 @@
                 <header class="reg">Iniciar Sesion</header>
                 <form action="/user/login" method="POST">
 
+                    <div>
+                        <ul id="errores"> </ul>
+                    </div>
+
                     <div class="campo input-campo">
-                        <input type="email" placeholder="Email" class="input" name="email">
+                        <input type="email" placeholder="Email" class="input" name="email" required>
                         <% if (locals.errors && errors.email) {%>
                             <div class="text-danger">
                                 <%= errors.email.msg %> 
                             </div>
                         <% } %> 
+                        <span></span>
                     </div>
 
                     <div class="campo input-campo">
-                        <input type="password" placeholder="Contraseña" class="input" name="password">
+                        <input type="password" placeholder="Contraseña" class="input" name="password" required>
                         <!-- <i class="fa-regular fa-eye-slash"></i> -->
+                        <span></span>
                     </div>
                     
                     <div class="form-link">
@@ -61,5 +68,8 @@
 </div> 
         </div>
     </section>
+
+<script src="/js/login.js"></script>
+
 </body>
 </html>

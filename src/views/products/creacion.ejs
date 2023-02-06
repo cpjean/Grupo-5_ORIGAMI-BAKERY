@@ -3,6 +3,7 @@
 <head>
     <%- include ('../partials/head') %> 
     <link href="/css/creacion.css" rel="stylesheet">
+    <link href="/css/Validaciones.css" rel="stylesheet">
     <title>Añadir Producto</title>
 </head>
 <body>
@@ -16,6 +17,10 @@
             <div class="form-content">
 
                 <header class="reg">Añadir Producto</header>
+
+                <div>
+                    <ul id="errores"></ul>
+                </div>
 
                 <form action="/productos/add/create" method="POST" enctype="multipart/form-data">
 
@@ -68,6 +73,8 @@
         </div>
 
     </section>
+
+    <script src="/js/creacion-edicion.js"></script>
 
 </body>
 </html>
