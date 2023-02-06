@@ -26,7 +26,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    position: fixed;
+    position: absolute;
     top: 5px;
     left: 5px;
     right: 5px;
@@ -35,14 +35,12 @@ a {
 
 /*-----------------LOGO-------------------*/
 .cont-logo {
-    background-color: #e1e1e1a0;
-    border-radius: 50%;
     position: relative;
-    width: 90px;
+    width: 120px;
 }
 .cont-logo img {
-    filter: drop-shadow( 5px 3px 15px #e3bd00a9);
     width: 100%;
+    border-radius: 10px;
 }
 
 /*--------------NAVEGADOR---------------*/
@@ -123,6 +121,9 @@ a {
 
 /*------------------FOOTER---------------*/
 /*Footer minimizado para movil*/
+#footer {
+    margin-top: 5px;
+}
 #footer a {
     text-decoration: none;
     color: #ffffffae;

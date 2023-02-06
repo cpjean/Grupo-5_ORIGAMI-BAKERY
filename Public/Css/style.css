@@ -1,11 +1,66 @@
-.section{
-    border-radius: 5px;
-    width: 90%;
-    margin: 115px auto 0;
-    background-color: rgb(206, 204, 204);
-    padding-bottom: 20px;
-    height: fit-content;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Museo Sans Condensed ';
+    text-decoration:none;
+    list-style:none;
 }
+
+/* NAV BAR CSS */
+
+img{
+    width: 50%;
+    height: 750%;
+}
+
+
+
+.main-navbar .top-navbar{
+    background-color: #361611;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-navbar .top-navbar .nav-link{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu{
+    padding: 0px 0px;
+    border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+    width: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+.main-navbar .navbar{
+    padding: 0px;
+    background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link{
+    padding: 8px 20px;
+    color: #000;
+    font-size: 15px;
+}
+
+/* NOSOTROS CSS */
+
+
+.section{
+    width: 100%;
+    height: 100%;
+    background-color: #361611;
+}
+
 
 .section .container{
     width: 80%;
@@ -23,7 +78,7 @@
 .container .title h1{
     text-transform: uppercase;
     font-size:35px;
-    color: #88941e;
+    color: #FEF9DB;
 }
 
 .container .title h1::after{
@@ -53,7 +108,7 @@
 } 
 
 .content .article h3{
-    color: #a3a3a3;
+    color: #FEF9DB;
     font-size: 17px;
 }
 
@@ -62,7 +117,7 @@
     margin-top: 20px;
     font-size: 14px;
     line-height: 1.5;
-    color: black;
+    color: whitesmoke;
 }
 
 .content .article .button{
@@ -161,5 +216,47 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
 
 
+/* ////////////////FOOTER//////////////// */
+
+.footer-area{
+    padding: 20px 0px;
+    background-color: #262626;
+    color: #fff;
+}
+.footer-area a{
+    text-decoration: none;
+}
+.footer-area .footer-heading{
+    font-size: 24px;
+    color: #fff;
+}
+.footer-area .footer-underline{
+    height: 1px;
+    width: 70px;
+    background-color: #ddd;
+    margin: 10px 0px;
+}
+.copyright-area{
+    padding: 14px 0px;
+    background-color: #262626;
+}
+.copyright-area p{
+    margin-bottom: 0px;
+    color: #fff;
+}
+.copyright-area .social-media{
+    text-align: end;
+}
+.copyright-area .social-media a{
+    margin: 0px 10px;
+    color: #fff;
+    width: 20px;
+}

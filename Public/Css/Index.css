@@ -23,6 +23,7 @@
     display: flex;
 }
 .img-movil img {
+    object-fit: cover;
     width: 100vw;
     height: 100vh;
 }
