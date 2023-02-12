@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const path = require ('path');
 const { Sequelize } = require('../database/models');
 
@@ -51,18 +52,46 @@ let controladorProductos = {
             return res.render ('../views/products/creacion.ejs',{allTypes , allLots})
         })
     },
+
+
+   
+
     // uso los datos obtenidos para crear un producto
     create: function (req, res){
-        db.Product.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            img: req.file.filename,
-            id_type: req.body.type,
-            id_lot: req.body.lot,
-        }). then (()=>{
-        res.redirect ('/productos')})
-    }, 
+        const resultadoValidacion = validationResult(req);
+
+        if (resultadoValidacion.errors.length > 0){
+            return res.render ('../views/products/creacion.ejs', {
+                errors: resultadoValidacion.mapped(),
+                oldData: req.body
+            });
+        } 
+         db.Product.findOne({ 
+            where:{
+                name: req.body.name
+            }
+        })
+
+        .then(
+            productName => {
+                if ( productName ) {
+                    return res.render ('../views/products/creacion.ejs',{errors: {
+                        name: {msg: "Este producto ya existe"}
+                    }, oldData: req.body
+                })
+                } else {
+                    db.Product.create({
+                        name: req.body.name,
+                        description: req.body.description,
+                        price: req.body.price,
+                        img: req.file.filename,
+                        id_type: req.body.type,
+                        id_lot: req.body.lot,
+                    }). then (()=>{
+                    res.redirect ('/productos')})
+                }
+                })
+            },
 
     // renderizo la pagina de edicion de un producto segun el id
     edicion: function (req, res){
@@ -78,7 +107,7 @@ let controladorProductos = {
     }, 
     
     // edito un producto
-    update:  function (req, res){
+    update:  function (req, res){ 
         let idEdit = Number(req.params.id);
         db.Product.update({
             name: req.body.name,
@@ -93,6 +122,8 @@ let controladorProductos = {
         }). then (()=>{
         res.redirect ('/productos')})
     },
+
+        
     // borro un producto
     destroy: function (req, res){
             let idEdit = Number(req.params.id);

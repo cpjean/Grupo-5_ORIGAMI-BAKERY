@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { check } = require('express-validator');
 const router = express.Router();
 
 
@@ -9,7 +9,8 @@ const rutaProductos = require ('../controllers/controladorProductos');
 // requerimiento de middlewares
 const multerMid = require('../middlewares/multerMidProduct');
 const authMidProductos = require('../middlewares/authMid');
-const rutaProductMid = require('../middlewares/rutaProductMid')
+const rutaProductMid = require('../middlewares/rutaProductMid');
+const validacionProducts = require('../middlewares/validacionProductsMid');
 
 
 /* listado de productos */
@@ -27,7 +28,9 @@ router.post('/add/create', multerMid.single('img'), rutaProductos.create);
 
 /* obtengo el form de edicion y lo cargo */
 router.get('/:id/edicion', authMidProductos, rutaProductos.edicion);
-router.put('/:id/edicion', multerMid.single('img'), rutaProductos.update);
+
+/* aca deberia agregar validacionProducts pero me da error*/
+router.put('/:id/edicion', multerMid.single('img'), validacionProducts, rutaProductos.update);
 
 /* Acción de borrado */
 router.delete('/:id/edicion', rutaProductos.destroy);

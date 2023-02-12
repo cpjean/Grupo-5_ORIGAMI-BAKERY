@@ -7,6 +7,8 @@ const publicpath = path.resolve (__dirname,'./Public');
 const session = require('express-session');
 const cookies = require ('cookie-parser')
 
+
+
 // middlewares
 const usuarioLoggedMid = require ('./src/middlewares/usuarioLoggedMid')
 const adminMid = require ('./src/middlewares/adminMid')

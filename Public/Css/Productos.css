@@ -8,19 +8,28 @@ separacion del ultimo producto con el footer*/
 /*-----------------contenedor productos-------------------*/
     #productos{
         width: 100%;
+        height: 25%;
         margin: 100px auto 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    #productos img{
+    .contImg{
         padding: 2px;
         border-radius: 10px;
         width: 50%;
         height: 170px;
     }
+    img{
+        object-fit: cover;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+    }
     .descripcion{
+        margin: auto;
+        text-align: center;
         border-left: solid 1px #6d6875;
         color: black;
         width: 60%;
@@ -44,9 +53,11 @@ separacion del ultimo producto con el footer*/
     #productos {
         flex-direction: row;
         flex-wrap:wrap;
-        justify-content: space-between;
+        justify-content:flex-start;
+        margin-left: 10px;
     }
     .card {
+        margin: 10px;
         display: flex;
         width: 30%;
         flex-direction: row;
@@ -58,5 +69,12 @@ separacion del ultimo producto con el footer*/
         flex-direction: row;
         align-self: flex-start;
         width: 100%;
+    }
+    .descripcion{
+        color: black;
+        width: 60%;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
     }
 }
