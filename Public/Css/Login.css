@@ -1,6 +1,12 @@
 .container {
     width: 100%;
 }
+
+.text-danger li{
+    color: red;
+    padding: 1px;
+}
+
 /* a la caja del login le asigno: */
 .form{
     max-width: 430px;

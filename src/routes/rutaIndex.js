@@ -3,15 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 /* requerimos rutaIndex */
-const rutaIndex = require ('../controllers/controladorViews')
+const rutaIndex = require ('../controllers/controladorIndex')
 
 /* llamamos al metodo que tenemos en el controlador, */
 
 /* index */
-router.get('/', rutaIndex.index)
-
-router.get('/nosotros', rutaIndex.nosotros)
-
-
+router.get('/', rutaIndex.productos)
 
 module.exports = router;

@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include ('../partials/head') %> 
     <link href="/css/productos.css" rel="stylesheet">
-    <title>Productos</title>
+    <%- include ('../partials/head') %>
+        
+
+        <title>Productos</title>
 </head>
 
+
+
+
 <body>
-
-    <%- include ('../partials/header') %> 
-
-    <main id="main-productos">
-
-        <section id="productos"> 
-            
-            <% productos.forEach(product => { %> 
+    <%- include ('../partials/header') %>
+   
+  <div class="py-3 py-md-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="mb-4">Productos</h4>
+            </div>
+            <div id="contProducts" class="col-md-3" >
+                <% productos.forEach(product => { %> 
                 
-                <article class="card">
-                    <a href="/productos/<%= product.id %>/detalle">
-                    <div class="contImg"><img src="/imagenes/products/<%= product.img %>" class="imagen-producto"></div>
-                    <h3 class="descripcion"> <%= product.name %><br><br>$<%= product.price %> <%= product.cantidad %></h3>
-                    </a>
-                </article>
-            <% }) %> 
-        </section>
-    </main>
+                    <div class="product-card">
+                    <div class="product-card-img">
+                        <label class="stock bg-success">En Stock</label>
+                       <a href="/productos/<%= product.id %>/detalle"> <img src="/imagenes/products/<%= product.img %>" alt="imagen-producto"></a>
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-brand">Panaderia</p>
+                        <h5 class="product-name">
+                           <a href="">
+                            <%= product.name %> 
+                           </a>
+                        </h5>
+                        <div>
+                            <span class="selling-price">$<%= product.price %></span>
+                        </div>
+                        <div class="mt-2">
+                            <a href="/carrito" class="btn btn1">Añadir al carrito</a>
+                            
+                            <a href="/productos/<%= product.id %>/detalle" class="btn btn1"> Ver </a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %> 
+        </div>
+    </div>
+  </div>
+ </div>
+    <%- include ('../partials/footer') %>
 
-</body>  
+</body>
 
 </html>

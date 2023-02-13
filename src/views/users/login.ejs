@@ -19,7 +19,7 @@
                         <input type="email" placeholder="Email" class="input" name="email">
                         <% if (locals.errors && errors.email) {%>
                             <div class="text-danger">
-                                <%= errors.email.msg %> 
+                            <li> <strong><%= errors.email.msg %> </strong></li>
                             </div>
                         <% } %> 
                     </div>

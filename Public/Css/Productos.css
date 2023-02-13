@@ -1,80 +1,81 @@
-#main-productos {
-    margin: 0 auto;
-    width: 90%;
-    display: flex;
+/* ////////////////Productos/////////////////////// */
+/* Product Card */
+.product-card{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+    margin: 10px;
+  } 
+  .product-card a{
+    text-decoration: none;
+  }
+  .product-card .stock{
+    position: absolute;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 12px;
+    margin: 8px;
+    font-size: 12px;
+  }
+  .product-card .product-card-img{
+    max-height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    width: fit-content;
+    margin: auto;
+  }
+  .product-card .product-card-body{
+    padding: 10px 10px;
+  }
+  .product-card .product-card-body .product-brand{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #937979;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .product-card .product-card-body .product-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .product-card .product-card-body .selling-price{
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .product-card .product-card-body .original-price{
+    font-size: 18px;
+    color: #937979;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  .product-card .product-card-body .btn1{
+    border: 1px solid;
+    margin-right: 3px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+    
+  }
+  
+  @media (min-width: 768px){
+  #contProducts {
+      margin-left: 5%;
+      flex: 0 0 auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:flex-start
+  }
+  .product-card{
+    width: 20%;
+  }
 }
-/*Buscar la forma de ocultar los productos a medida que se hace scroll, tambien lograr
-separacion del ultimo producto con el footer*/
-/*-----------------contenedor productos-------------------*/
-    #productos{
-        width: 100%;
-        height: 25%;
-        margin: 100px auto 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .contImg{
-        padding: 2px;
-        border-radius: 10px;
-        width: 50%;
-        height: 170px;
-    }
-    img{
-        object-fit: cover;
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-    }
-    .descripcion{
-        margin: auto;
-        text-align: center;
-        border-left: solid 1px #6d6875;
-        color: black;
-        width: 60%;
-    }
-/*-----------------contenedor de cada producto-------------------*/
-    .card{
-        border: #6d6875 solid 1px;
-        margin: 10px 0;
-        width: 100%;
-        border-radius: 10px;
-        background-color: #e5e5e5;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12) , 0 1px 2px rgba(0,0,0,0.24);
-    }
-    .card a{
-        display: flex;
-        flex-direction: row;
-        align-self: flex-start;
-        width: 100%;
-    }
-@media (min-width: 1200px) {
-    #productos {
-        flex-direction: row;
-        flex-wrap:wrap;
-        justify-content:flex-start;
-        margin-left: 10px;
-    }
-    .card {
-        margin: 10px;
-        display: flex;
-        width: 30%;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-self: auto;
-    }
-    .card a{
-        display: flex;
-        flex-direction: row;
-        align-self: flex-start;
-        width: 100%;
-    }
-    .descripcion{
-        color: black;
-        width: 60%;
-        text-align: center;
-        padding: 10px;
-        margin: auto;
-    }
-}
+  /* Product Card End */

@@ -1,13 +1,13 @@
+const path = require ('path');
+const { Sequelize } = require('../database/models');
 
-const observer = new IntersectionObserver((entires) => {
-    entires.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting){
-            entry.target.classList.add('show')
-        }else{
-            entry.target.classList.remove('show')
-        }
-    })
-})
-const hiddenElements = documen.querySelectorAll('.section')
-hiddenElements.forEach((el) => observer.observe(el))
+const db = require ('../database/models');
+const Op = Sequelize.Op;
+module.exports= {
+    productos: function (req, res){
+        db.Product.findAll()
+        .then (function(productos){
+            return res.render (path.join('../views/index.ejs'),{productos})
+        })
+    } 
+}

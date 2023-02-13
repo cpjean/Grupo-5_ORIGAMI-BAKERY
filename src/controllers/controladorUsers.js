@@ -24,7 +24,7 @@ let controladorUsers = {
         }
       // defino si ya hay un email igual previamente registrado
 
-      let emailReg = db.User.findOne ({
+       db.User.findOne ({
         where:{
             email: req.body.email}
         })

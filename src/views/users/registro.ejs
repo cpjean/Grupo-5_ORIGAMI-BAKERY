@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %> 
-    <link href="/css/Login.css" rel="stylesheet">
+    <link href="/css/Registro.css" rel="stylesheet">
     <title>Registrate</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                         <input type="email" placeholder="Email" class="input" name="email" value="<%= locals.oldData ? oldData.email  : null %> ">
                         <% if (locals.errors && errors.email) {%>
                             <div class="text-danger">
-                                <%= errors.email.msg %> 
+                              <li><strong><%= errors.email.msg %></strong></li>
                             </div>
                         <% } %> 
                     </div>
@@ -28,7 +28,7 @@
                         <input type="text" placeholder="Nombre" class="input" name="name" value="<%= locals.oldData ? oldData.name  : null %>">
                         <% if (locals.errors && errors.name) {%>
                             <div class="text-danger">
-                                <%= errors.name.msg %> 
+                               <li><strong><%= errors.name.msg %> </strong></li> 
                             </div>
                         <% } %> 
                     </div>
@@ -37,7 +37,7 @@
                         <input type="file" placeholder="Avatar" class="input" name="avatar" value="<%= locals.oldData ? oldData.avatar : null %>">
                         <% if (locals.errors && errors.avatar) {%>
                             <div class="text-danger">
-                                <%= errors.avatar.msg %> 
+                                <li><strong><%= errors.avatar.msg %></strong></li> 
                             </div>
                         <% } %> 
                     </div>
@@ -46,7 +46,7 @@
                         <input type="password" placeholder="Contraseña" class="input" name="password">
                         <% if (locals.errors && errors.password) {%>
                             <div class="text-danger">
-                                <%= errors.password.msg %> 
+                               <li><strong><%= errors.password.msg %> </strong></li> 
                             </div>
                         <% } %> 
                         <!-- <i class="fa-regular fa-eye-slash"></i> -->
@@ -69,7 +69,7 @@
                                     
                 </form>
                 <div class="form-link">
-                   <span>Ya tenes una cuenta? <a href="user/login" class="signup-link">Inicia sesion</a></span>
+                   <span>Ya tenes una cuenta? <a href="/Login" class="signup-link">Inicia sesion</a></span>
                 </div>
             </div>
             

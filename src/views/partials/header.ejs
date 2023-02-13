@@ -1,42 +1,69 @@
-<header id="header">
-
-    <div class="cont-logo">
-       <a href="/"><img src="\Imagenes\Logo.png" alt="Logo del negocio" class="logo"></a> 
-    </div>
-    <div class="cont-nav">
-        <nav class="navegacion">
-            <div class="nav-desplegable">
-                <label for="check-desplegable" class="fa-solid fa-bars desplegable"></label>
+<body>
+    <div class="main-navbar shadow-sm sticky-top">
+        <div class="top-navbar">
+            <div class="container-fluid">
+                <div class="row">
+                   <a href=""></a> <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
+                        <a href="/"><img src="\Imagenes\Logo.png" alt="Logo del negocio" class="logo"></a>
+                </div>
+                    <div class="col-md-5 my-auto">
+                        <form role="search">
+                            <div class="input-group">
+                                <input type="search" placeholder="Buscar" class="form-control" />
+                                <button class="btn bg-white" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 my-auto">
+                        <ul class="nav justify-content-end">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/carrito">
+                                    <i class="fa fa-shopping-cart"></i> Carrito (0)
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   Productos 
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <% if (locals.admin) { %> 
+                                        <li><a class="dropdown-item" href="/productos/add/create">Crear</a></li> 
+                                    <% } %>
+                                    <li><a class="dropdown-item" href="/productos"> Todo</a></li>
+                                    <li><a class="dropdown-item" href="/productos/pasteleria"> Pasteleria</a></li>
+                                    <li><a class="dropdown-item" href="/productos/panaderia"> Panaderia</a></li>
+                                    <li><a class="dropdown-item" href="/productos/evento"> Eventos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <% if (locals.logged) { %>
+                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-user"></i><%= userLog.name %></a>
+                                    </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="/user/perfil">Perfil</a></li>
+                                            <li><a class="dropdown-item" href="/user/logout">Salir</a></li>
+                                        </ul>
+                                    </li>
+                                <% } else { %> 
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-user"></i> Usuario </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="/user/login"></i> Iniciar Sesion</a></li>
+                                        <li><a class="dropdown-item" href="/user/registro"></i> Registrarse</a></li>
+                                    </ul>
+                                <% } %> 
+                               
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <input type="checkbox" id="check-desplegable">
-            <ul class="pestañas">
-                <li class="minimisar"><a href="/">Inicio</a></li>
-                <li class="productos"><a href="#">Productos</a>
-                    <ul class="sub-menu">
-                        <li><a href="/productos">Todo</a></li>
-                        <li><a href="/productos/panaderia">Panaderia</a></li>
-                        <li><a href="/productos/pasteleria">Pasteleria</a></li>
-                        <li><a href="/productos/evento">Eventos</a></li>
-                    </ul>
-                </li>
-                <% if (locals.admin) { %> 
-                <li><a href="/productos/add/create">Crear</a></li> 
-                <% } %>
-                <li class="minimisar"><a href="/nosotros">Nosotros</a></li>
-                <% if (locals.logged) { %> 
-                <li class="minimisar"><a href="/carrito">Carrito</a></li>
-                <li class="productos"><a href="#"><%= userLog.name %></a>
-                    <ul class="sub-menu">
-                        <li><a href="/user/perfil">Perfil</a></li>
-                        <li><a href="/user/logout">Salir</a></li>
-                    </ul>
-                </li>
-                <% } else { %> 
-                <li class="minimisar"><a href="/user/login">Ingresá</a></li>
-                <% } %> 
-            </ul>
-        
-        </nav>
-    </div>
-    
-</header>
+        </div>
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>

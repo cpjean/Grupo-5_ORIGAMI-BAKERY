@@ -1,44 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('./partials/head') %> 
-    <link href="css/Index.css" rel="stylesheet">
-    <title>Index</title>
+  <%- include ('./partials/head') %> 
+  <link href="/Public/Css/General.css" rel="stylesheet">
+    <title>Inicio</title>
 </head>
+<%- include ('./partials/header') %>
 
-<body id="body">
 
- <%- include ('./partials/header') %> 
-
-    <main id="main">
-
-        <div class="slider">
-            <ul class="cont-img-carrusel">
-                <li class="img-movil">
-                    <div class="enunciado">
-                        <a href="/Productos/pasteleria"><h2 class="titulo">Date un gusto</h2></a> 
-                        <p class="descripcion"> Descubre nuestras delicias</p>
-                    </div>
-                    <img src="Imagenes\tienda.jpg" alt="Tienda">
-                </li>
-                <li class="img-movil">            
-                    <div class="enunciado">
-                        <a href="/Productos"><h2 class="titulo">La mejor calidad</h2></a>
-                        <p class="descripcion">El mejor sabor</p>
-                    </div>
-                    <img src="Imagenes\carrusel-productos-panes.jpg" alt="Producto: panes">
-                </li>
-                <li class="img-movil">
-                    <div class="enunciado">
-                        <a href="/nosotros"><h2 class="titulo">Conocenos</h2></a>
-                        <p class="descripcion">Mas de x años historias</p>
-                    </div>
-                    <img src="Imagenes\carrusel-nosotros.jpg" alt="Nosotros">
-                </li>
-            </ul>
+ <!-- ###########CARROUSEL############## -->
+ <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/Imagenes/carrusel-nosotros.jpg" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>La mejor calidad</h5>
+          <p>El mejor sabor</p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/Imagenes/carrusel-productos-panes.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Conocenos</h5>
+          <p>Mas de 10 años de historia</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/Imagenes/carrusel-productos.jpg" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Date un gusto</h5>
+          <p>Descubre nuestras delicias</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+  </div>
 
-    </main>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+<!--   <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script> -->
+
+
+  <div class="section">
+    <div class="container">
+      <div class="title">
+        <h1>Nosotros</h1>
+      </div>
+      <div class="content">
+        <div class="article">
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            iure tempora, perspiciatis atque veniam ut dolorum? Rerum fugiat
+            deserunt porro, incidunt adipisci obcaecati iste
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            ducimus illo voluptate facere debitis vel porro quibusdam alias
+            similique fugiat. Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Temporibus culpa praesentium nulla hic illo
+            dolorem eos sequi suscipit fugiat ratione, eius deserunt, optio
+            laborum officiis incidunt ut ex? Suscipit, voluptatum!
+          </p>
+          <div class="button">
+            <a href="">Leer Mas</a>
+          </div>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="/Imagenes/nosotros1.jpg" alt="" />
+      </div>
+      <div class="social">
+        <a href=""><i class="fa-brands fa-facebook-f facebook-icon"></i></a>
+        <a href=""><i class="fa-brands fa-google google-icon"></i></a>
+        <a href=""><i class="fa-brands fa-facebook-f facebook-icon"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="py-3 py-md-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="mb-4">Podrian interesarte</h4>
+            </div>
+           <% for (var i = 0; i < 4; i++) { %>
+              <div class="col-md-3">
+                <div class="product-card">
+                    <div class="product-card-img">
+                        <label class="stock bg-success">En Stock</label>
+                       <a href="productos/<%=productos[i].id%>/detalle"> <img src="/Imagenes/products/<%=productos[i].img%>" alt="Chipa"></a>
+                    </div>
+                    <div class="product-card-body">
+                        <p class="product-brand">Panaderia</p>
+                        <h5 class="product-name">
+                           <a href="">
+                            <%= productos[i].name %>
+                           </a>
+                        </h5>
+                        <div>
+                            <span class="selling-price">$<%= productos[i].price %></span>
+                        </div>
+                        <div class="mt-2">
+                            <a href="/carrito" class="btn btn1">Añadir al Cart</a>
+                            
+                            <a href="/productos/<%= productos[i].id %>/detalle"  class="btn btn1"> Ver </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+</div>
+
 
 <%- include('./partials/footer') %> 
 

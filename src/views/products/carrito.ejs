@@ -1,147 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('../partials/head') %>
     <link rel="stylesheet" href="/css/carrito.css"> 
+    <%- include ('../partials/head') %>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
     <title>Carrito</title>
 </head>
 <body>
     <%- include ('../partials/header') %> 
 
-    <main class="main">
-        <section class="cont-de-todo">
-            <section class="cont-izq">
-                <section class="cont-productos">
-                    <article>
-                        <div class="img-produ">
-                            <img src="imagenes/chipa.webp" alt="imagen del chipa" class="imagen-producto">
-                        </div>
-                        <div class="cont-descripcion-item">
-                            <div class="item">
-                                <h3 class="descripcion"> Chipa (pan de queso)</h3>
-                                <p>
-                                    $30 c/u
-                                </p>
-                                <div class="cantidad-configuration">
-                                    <span>Cantidad</span>
-                                    <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
-                                </div>
+    <main class="carritoContainer">
+
+        <h1 class="heading">
+            <ion-icon name="cart-outline"></ion-icon>Carrito
+        </h1>
+
+        <div class="item-flex">
+            <section class="cart">
+                <div class="cart-item-box">
+                    <h2 class="section-heading">Total de la orden</h2>
+                    <div class="product-card"  id="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/imagenes/products/chipa.webp" alt="producto" class="product-img">
                             </div>
-                            <div class="cont-botones">
-                                <div class="botones">
-                                    <div class="mas-menos">
-                                        <div class="mas">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-                                        <div class="menos">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">Chipa 1/4 </h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon class="iconosCarrito" name="remove-outline"></ion-icon>
+                                        </button>
+    
+                                        <span id="quantity">1</span>
+    
+                                        <button id="increment">
+                                            <ion-icon class="iconosCarrito" name="add-outline"></ion-icon>
+                                        </button>
                                     </div>
-                                    <div class="deshacer">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="img-produ">
-                            <img src="imagenes/chipa.webp" alt="imagen del chipa" class="imagen-producto">
-                        </div>
-                        <div class="cont-descripcion-item">
-                            <div class="item">
-                                <h3 class="descripcion"> Chipa (pan de queso)</h3>
-                                <p>
-                                    $30 c/u
-                                </p>
-                                <div class="cantidad-configuration">
-                                    <span>Cantidad</span>
-                                    <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
-                                </div>
-                            </div>
-                            <div class="cont-botones">
-                                <div class="botones">
-                                    <div class="mas-menos">
-                                        <div class="mas">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-                                        <div class="menos">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </div>
-                                    </div>
-                                    <div class="deshacer">
-                                        <i class="fa-solid fa-trash"></i>
+    
+                                    <div class="price">
+                                        $ <span id="price">1.25</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="img-produ">
-                            <img src="imagenes/chipa.webp" alt="imagen del chipa" class="imagen-producto">
-                        </div>
-                        <div class="cont-descripcion-item">
-                            <div class="item">
-                                <h3 class="descripcion"> Chipa (pan de queso)</h3>
-                                <p>
-                                    $30 c/u
-                                </p>
-                                <div class="cantidad-configuration">
-                                    <span>Cantidad</span>
-                                    <input type="number" name="cantidad" id="cantidad" min="1" value="1" required>
-                                </div>
-                            </div>
-                            <div class="cont-botones">
-                                <div class="botones">
-                                    <div class="mas-menos">
-                                        <div class="mas">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </div>
-                                        <div class="menos">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </div>
-                                    </div>
-                                    <div class="deshacer">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+
+                            <button id="product-close-btn">
+                                <ion-icon class="iconosCarrito" name="close-outline"></ion-icon>
+                            </button>
                     
-                </section>
+                        </div>
+                    </div>
+
+                    <div class="product-card" id="product-card">
+                        <div class="card">
+                            <div class="img-box">
+                                <img src="/imagenes/products/medialuna.webp" alt="producto" class="product-img">
+                            </div>
+
+                            <div class="detail">
+                                <h4 class="product-name">Medialunas </h4>
+
+                                <div class="wrapper">
+                                    <div class="product-qty">
+                                        <button id="decrement">
+                                            <ion-icon class="decrement" name="remove-outline"></ion-icon>
+                                        </button>
+    
+                                        <span id="quantity">1</span>
+    
+                                        <button id="increment">
+                                            <ion-icon class="increment" name="add-outline"></ion-icon>
+                                        </button>
+                                    </div>
+    
+                                    <div class="price">
+                                        $ <span id="price">1.25</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="product-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                    
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
-            <section class="cont-der">
-                <section class="sect-detalle">
-                    <div class="cont-detalle">
-                        <div class="titulo-detalle">
-                            <h3>Detalle de la compra:</h3>
+
+            <section class="chekout">
+                <h2 class="section-heading">Detalles de pago</h2>
+                <div class="payment-form">
+                    <div class="wrapper">
+                        <div class="discount-token">
+                            <label for="discount-token" class="label-default">Codigo de descuento</label>
+                            <div class="wrapper-flex">
+                                <input type="text" name="discount-token" id="discount-token" class="input-default">
+                            
+                                <button id="botonDescuento" class="btn btn-outline">Enviar</button>
+                            </div>
                         </div>
-                        <div class="descripcion">
-                            n producto x       n cantidad<br><br>
-                            n producto x       n cantidad<br><br>
-                            n producto x       n cantidad<br><br>
-                            n producto x       n cantidad<br>
+                        <div class="amount">
+                            <div class="total">
+                                <span>Subtotal $</span> <input type="number" value="2.05">
+                            </div>
+                                
+                             <div class="total">
+                                <span>Total $</span><input type="number" value="2.15">
+                             </div>
                         </div>
-                        <div class="total">
-                            <h4>Total:</h4>
-                            <input type="number" name="cantidad" id="cantidad" required>
+                    </div>
+                    <form action="">
+                    <div class="payment-method">
+                        <button class="method">
+                            <ion-icon name="card"></ion-icon>
+                            <span>Tarjeta de credito</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                        </button>
+
+                        <button class="method">
+                            <ion-icon name="logo-paypal"></ion-icon>
+                            <span>Paypal</span>
+                            <ion-icon class="checkmark fill" name="checkmark-circle-outline"></ion-icon>
+                        </button>
+                    </div>
+                
+                        <div class="cardholder-name">
+                            <label for="" class="label-default">Nombre de la tarjeta</label>
+                            <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
                         </div>
-                        <div class="cart-btn">Comprar</div>
-                    </div>
-                </section>
-                <section class="sect-tipos">
-                    <div class="cont-texto">
-                        <h3>Formas de pago:</h3>
-                    </div>
-                    <div class="iconos-de-pago">
-                        <i class="fa-solid fa-credit-card"></i>
-                        <i class="fa-solid fa-credit-card"></i>
-                        <i class="fa-solid fa-credit-card"></i>
-                    </div>
-                </section>
+            
+                        <div class="input-flex">
+            
+                            <div class="expire-date">
+                                <label for="expire-date" class="label-default">Fecha de expiracion</label>
+                                <div class="input-flex">
+                                    <input type="month" id="month-input">
+                                    <script>
+                                        const input = document.getElementById("month-input");
+                                        input.addEventListener("input", function() {
+                                          console.log(this.value);
+                                        });
+                                      </script>
+                                </div>
+                            </div>
+                            <div class="cvv">
+                                <label for="" class="label-default">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="input-default">
+                            </div>
+                        </div>
+            
+                    </form>
+
+                </div>
+
+                <button class="btn btn-primary pagar">
+                    <b>Pagar</b> $ <span id="payAmount">1.15</span> 
+                </button>
+
             </section>
-        </section>
+
+            <!-- seccion carrito -->
+
+            
+
+        </div>
+
+        
+
     </main>
+
 </body>
 </html>
