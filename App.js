@@ -16,6 +16,8 @@ const rutaIndex= require ('./src/routes/rutaIndex.js');
 const rutaProductos= require ('./src/routes/rutaProductos.js');
 const rutaCarrito= require ('./src/routes/rutaCarrito.js');
 const rutaUsers= require ('./src/routes/rutaUsers.js');
+const rutaUsersApi = require("./src/routes/api/rutaUsersApi")
+const rutaProductsApi = require("./src/routes/api/rutaProductsApi")
 
 // seteos
 app.use(methodOverride('_method'));
@@ -50,6 +52,10 @@ app.use('/productos', rutaProductos);
 app.use('/carrito', rutaCarrito);
 
 app.use('/user', rutaUsers);
+
+app.use('/api', rutaUsersApi)
+
+app.use('/api', rutaProductsApi)
 
 // corre el servidor
 app.listen (3030, ()=>{
