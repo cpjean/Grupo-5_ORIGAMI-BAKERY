@@ -1,0 +1,151 @@
+.carritoContainer{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    margin: 15px 0;
+    font-size: 3rem;
+}
+.item-flex{
+    color: #fff;
+    padding: 10px;
+    width: 90%;
+    width: 450px;
+    margin: auto;
+    background-color: #361611dd;;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-heading{
+    font-size: 2rem;
+    text-align: center;
+}
+.chekout .section-heading {
+    margin: 10px auto;
+    border-top: black dotted 2px ;
+
+}
+.payment-form {
+    font-size: 1rem;
+    margin: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.payment-form .wrapper{
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.discount-token{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.discount-token .wrapper-flex{
+    display: block;
+}
+#botonDescuento{
+    background-color: dodgerblue;
+    border: 1px solid black;
+    color: #fff;
+    display: block;
+    margin: 10px auto 0;
+    width: 100%;
+}
+.amount{
+    margin-left: 15px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+.amount input{
+    width: 30%;
+}
+.payment-method{
+    display: flex;
+    justify-content: space-between;
+}
+.method {
+    margin: 10px;
+}
+.expire-date{
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.cvv{
+    display: flex;
+    justify-content: space-between;
+}
+.pagar{
+    width: 100%;
+    margin: 0 auto 0;
+}
+#product-card {
+    color: black;
+    display: flex;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+.product-card .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1px 5px;
+}
+.img-box{
+    width: 45%;
+}
+.img-box .product-img{
+    width: 100%;
+    border-radius: 10px 0 0 10px ;
+}
+.detail{
+    width: 40%;
+}
+.product-name{
+    text-align: center;
+}
+#increment {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#decrement{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.iconosCarrito{
+    margin: auto;
+}
+#product-close-btn{
+    margin: 0 10px 15px 0;
+    font-size: 40px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.chekout{
+    padding-bottom: 20px;
+}
+
