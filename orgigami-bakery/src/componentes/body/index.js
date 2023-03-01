@@ -10,8 +10,8 @@ function Body() {
        fetch("http://localhost:3030/api/products/")
        .then(res => res.json())
        .then(data =>{
-            const categories = data.meta.countByCategory
-            const count = data.meta.count
+            const categories = [{count: 5, name:'Panaderia'},{count: 4, name:'Pasteleria'},{count: 2, name:'Eventos'}]
+            const count = data.count
             setProductos({count:count, categories:categories})
         })
     }, [])
@@ -30,12 +30,12 @@ function Body() {
 
     const [ultProd, setUltProd] = useState({data:{}})
     useEffect(() => {
-       fetch("http://localhost:3030/api/products/ultimo")
+       fetch("http://localhost:3030/api/products/producto/ultimo")
        .then(res => res.json())
        .then(ultimo =>
         {
             const data = ultimo.data
-            console.log(data)
+            
             setUltProd({data:data})
         })
     }, [])
@@ -60,7 +60,7 @@ function Body() {
                                 <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={ultProd.data.image} alt="dummy"/>
                             </div>
                             <p>{ultProd.data.description}</p>
-                            <a target="_blank" rel="nofollow" href={ultProd.data.detail}>Ver detalle de producto</a>
+                            <a  rel="nofollow" href={ultProd.data.detail}>Ver detalle de producto</a>
                         </div>
                     </ContLarge>
                 </div>  
@@ -70,7 +70,7 @@ function Body() {
                         <div className="card-body">
                             <div className="row">
                                 {productos.categories.map(category => (
-                                    <CategoryCard link={category.link} title={category.title} count={category.count}/>
+                                    <CategoryCard link={'http://localhost:3030/productos/'+category.name} count={category.count} title={category.name} />
                                 ))}              
                             </div>
                         </div>

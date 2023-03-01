@@ -1,6 +1,7 @@
 // requerimiento de modulos
 const express = require ('express');
 const app = express ();
+const cors = require('cors')
 const path = require ('path');
 const methodOverride = require('method-override');
 const publicpath = path.resolve (__dirname,'./Public');
@@ -20,6 +21,8 @@ const rutaUsersApi = require("./src/routes/api/rutaUsersApi")
 const rutaProductsApi = require("./src/routes/api/rutaProductsApi")
 
 // seteos
+app.use(cors())
+
 app.use(methodOverride('_method'));
 
 app.use(express.static('public'))

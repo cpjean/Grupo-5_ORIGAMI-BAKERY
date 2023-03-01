@@ -11,7 +11,7 @@ function Table() {
        .then(data =>
         {
             /*console.log(data.data)*/
-            setProductos(data.data)
+            setProductos(data.products)
         })
     }, [])
     console.log(productos)
@@ -26,7 +26,7 @@ function Table() {
                     </thead>
                     <tbody>
                         {productos.map(product => (
-                            <Body link={product.link} edit={product.edit} title={product.name} description={product.description} price={product.price} category={product.category.name}/>
+                            <Body link={product.link} title={product.name} description={product.description} price={product.price} category={product.id_category}/>
                             )
                         )}
                     </tbody>

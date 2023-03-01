@@ -1,46 +1,68 @@
-const DB = require("../../database/models")
-const OP = DB.Sequelize.Op;
+const db = require('../../database/models');
+const User = require('../../database/models/User')
 
-module.exports = {
-    list: (req,res)=> {
-        DB.User.findAll({})
-        .then((users) => {
-            const count = users.length;
-            const mappedUsers = users.map((user) => ({
-                id_user: user.id_user,
-                name: user.name,
-                surname:user.surname,
-                email: user.email,
-                dni:user.dni,
-                telephone: user.telephone,
-                detail: 'localhost:3000/api/users/${user.id}'
-            }));
-            return res.status(200).json({
-                count,
-                users:mappedUsers,
-                status:200,
-            });
-        });
-    },
-    detail: (req,res) => {
-        DB.User.findByPk(req.params.id, {
-          attributes: {
-            exclude: ["password", "password2","id_user_category"],
-          },
-        })
-          .then((usuario) => {
-            if (!usuario) {
-              return res.status(404).json({
-                message: "Usuario no encontrado",
-                status: 404,
-              });
+let apiUsuariosController = {
+
+    list: function(req, res){
+        db.User.findAll()
+        .then(function(users){
+
+            let user = users.map((user) => {
+                return ({
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    detail: 'http://localhost:3030/api/users/' + user.id
+                })
+            })
+
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    total: users.length
+                },
+                data: user
             }
-            const image = `/imagenes/users/${usuario.avatar}`;
-            return res.status(200).json({
-              ...usuario.dataValues,
-              image,
-              status: 200,
-            });
-          });
-      }
+
+            res.json(respuesta)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+
+    },
+
+    detail: function(req, res){
+        db.User.findOne({
+            where: {	
+                id: req.params.id   
+			},
+            include: 'role'
+        })
+        .then(function(user){
+
+            let respuesta = {
+                meta: {
+                    status: 200,
+                    name: user.name
+                },
+                data: {
+                    name: user.name,
+                    lastname: user.lastname,
+                    image: 'http://localhost:3030/images/users/' + user.image,
+                    birthdate: user.birthdate,
+                    gender: user.gender,
+                    role: user.role.type
+                }
+            }
+
+            res.json(respuesta)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    }
+
 }
+
+module.exports = apiUsuariosController;
